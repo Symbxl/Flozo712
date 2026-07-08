@@ -5,7 +5,9 @@ import { Container } from './primitives';
 
 const Wrap = styled.header`
   position: relative;
-  background: ${({ theme }) => theme.colors.gradientHero};
+  /* Shares the app-wide red ambient (see GlobalStyles) so every inner-page
+     header carries the same hero backdrop. */
+  background: transparent;
   padding: 9.5rem 0 3.5rem;
   border-bottom: 1px solid ${({ theme }) => theme.colors.border};
 

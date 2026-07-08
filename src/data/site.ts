@@ -1,52 +1,56 @@
 // =====================================================================
 //  Site-wide configuration, the one place to edit brand details,
-//  contact info, social links, and the hero showreel source.
+//  contact info, social links, and the primary quote CTA.
 // =====================================================================
 
 export const site = {
-  brand: 'Viridian Films',
-  wordmark: 'VRDN',
-  wordmarkFull: 'VIRIDIAN FILMS',
-  tagline: 'Make Something Worth Watching',
-  location: 'Los Angeles, CA', // update if needed
-  url: 'https://www.viridianfilms.org',
+  brand: 'Laser Weld Inc.',
+  wordmark: 'LASERWELD',
+  wordmarkFull: 'LASER WELD INC.',
+  tagline: 'Quality Welding & Turn-Key Manufacturing',
+  founded: 1994,
+  location: 'Katy, TX',
+  url: 'https://laserweldinc.com',
 
-  // Mission / value proposition (from viridianfilms.org).
+  // Mission / value proposition.
   mission:
-    'We create videos with clear, intentional goals, every frame crafted to tell your story, connect with your audience, and drive real results across digital platforms.',
+    'One of the leading fabricators in Texas. From a single part to a full turn-key build, we cut, bend, weld, machine, and deliver, all under one roof, backed by three decades of American manufacturing.',
+
+  // Short brand promise, used as a punchy secondary line.
+  promise: 'From big to small, we do it all.',
+
+  address: {
+    street: '1350 Schlipf Road',
+    city: 'Katy',
+    state: 'TX',
+    zip: '77493',
+    full: '1350 Schlipf Road, Katy, TX 77493',
+    mapUrl: 'https://www.google.com/maps/search/?api=1&query=1350+Schlipf+Road+Katy+TX+77493',
+  },
 
   contact: {
-    email: 'nathan@viridianfilms.org',
-    phone: '(626) 206-8179',
-    phoneHref: 'tel:+16262068179',
-    // Where "Book a Call" / "Work With Us" point. Swap for a Calendly/Cal.com
-    // link, a contact page, or keep the mailto fallback below.
+    email: 'sales@laserweldinc.com',
+    phone: '(713) 935-0815',
+    phoneHref: 'tel:+17139350815',
+    // Where "Request a Quote" / "Get a Quote" point. Swap for a form URL
+    // when there is one; the mailto fallback works everywhere for now.
     bookingUrl:
-      'mailto:nathan@viridianfilms.org?subject=Let%27s%20work%20together&body=Hi%20Nathan%2C%20I%27d%20love%20to%20talk%20about%20a%20project.',
+      'mailto:sales@laserweldinc.com?subject=Request%20a%20Quote&body=Hi%20Laser%20Weld%20team%2C%20I%27d%20like%20a%20quote%20on%20the%20following%20project%3A',
   },
 
   // Primary brand socials (shown in nav / footer).
   socials: {
-    instagram: 'https://instagram.com/vrdnfilms',
-    tiktok: 'https://tiktok.com/@vrdnfilms',
-    youtube: '', // add a brand YouTube channel URL when there is one
+    instagram: 'https://instagram.com/laserweldtx',
+    tiktok: 'https://tiktok.com/@laserweld.texas',
+    youtube: 'https://www.youtube.com/@LaserWeldTexas',
+    facebook: 'https://www.facebook.com/laserweldinc',
   },
 
   // Footer credit tags.
   credits: {
-    designer: 'Mystic Media Film',
-    designerUrl: 'https://www.mysticmediafilm.com',
-    partner: 'Creator Terminal',
-    partnerUrl: 'https://www.creatorterminal.com',
-  },
-
-  // Hero showreel. Drop an MP4 into /public (e.g. /showreel.mp4) and a poster
-  // frame into /public (e.g. /showreel-poster.jpg). If `videoSrc` is empty the
-  // hero falls back to an animated gradient, no broken video.
-  showreel: {
-    videoSrc: '/showreel.mp4',
-    poster: '/showreel-poster.webp',
-    // Optional "Watch full showreel" link (YouTube/Vimeo). Leave '' to hide.
-    fullUrl: '',
+    designer: 'Creator Terminal',
+    designerUrl: 'https://www.creatorterminal.com',
+    partner: '',
+    partnerUrl: '',
   },
 } as const;

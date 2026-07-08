@@ -6,10 +6,9 @@ import { Container, Section, SectionLabel, H2, Lead } from '../primitives';
 import { Reveal } from '../Reveal';
 import { site } from '@/data/site';
 
-const Wrap = styled(Section).attrs({ $surface: true })`
-  border-top: 1px solid ${({ theme }) => theme.colors.border};
-  border-bottom: 1px solid ${({ theme }) => theme.colors.border};
-`;
+// Flat base charcoal (theme.colors.bg) to match the "One facility" band and the
+// hero — the whole home page reads as one continuous surface.
+const Wrap = styled(Section)``;
 const Inner = styled(Container).attrs({ $wide: true })``;
 
 // Editorial split: heading rail on the left, the accordion on the right.
@@ -127,28 +126,28 @@ const Answer = styled.p`
 
 const faqs = [
   {
-    q: 'What kind of videos do you produce?',
-    a: 'Brand films, social content, testimonials, product launches, and ongoing content engines for digital platforms. Whatever the format, every frame is built around a clear, intentional goal, not just footage for the sake of it.',
+    q: 'What materials and processes do you work with?',
+    a: 'Steel, stainless, and aluminum across MIG, TIG, and laser welding, plus laser and plate cutting, CNC tube and plate bending, 3D tube profiling, machining, coating, and laser cleaning, all under one roof.',
   },
   {
-    q: 'How much does a project cost?',
-    a: 'It depends on scope, deliverables, and how often you need content. We tailor every engagement, from a single brand film to a full monthly partnership, so the budget maps to the outcomes that matter. Book a discovery call and we will scope it together.',
+    q: 'Do you handle small orders, or only large production runs?',
+    a: 'Both. From a single one-off part or prototype to production runs in the thousands, from big to small, we do it all. The same quality standard applies no matter the quantity.',
   },
   {
-    q: 'How long does a typical project take?',
-    a: 'Most one-off projects run two to four weeks from kickoff to final cut, depending on complexity and shoot logistics. Ongoing partnerships work on a recurring schedule we set together so you always know what is coming and when.',
+    q: 'How do I get a quote?',
+    a: 'Send us your prints, a CAD file, or even a rough sketch, along with material, quantity, and your timeline. We review the job, engineer it for manufacturability, and get you a fast, honest quote back as swiftly as possible.',
   },
   {
-    q: 'Do you handle everything in-house?',
-    a: 'Yes. Scripting, shooting, editing, and graphics are all handled end to end by our team. That keeps the story consistent, the process simple, and the quality high from the first call to launch.',
+    q: 'How fast can you turn a job around?',
+    a: 'Lead time depends on scope and material availability, but running every process in-house lets us move fast, no waiting on outside vendors. We ship an average of 1,754 parts a day and will commit to a firm schedule up front.',
   },
   {
-    q: 'Where are you based, and do you travel?',
-    a: `We are based in ${site.location}, and we regularly travel for shoots. If your project takes us somewhere new, we will fold the logistics into the plan up front, no surprises.`,
+    q: 'Do you deliver, and which industries do you serve?',
+    a: `We deliver on our own trucks and serve oil & gas, aerospace, wastewater, data centers, material handling, and structural fabrication. We are based in ${site.location} and ship across Texas and beyond.`,
   },
   {
-    q: 'How do we get started?',
-    a: 'Book a free discovery call. We will talk through your goals, your audience, and whether we are the right fit, then map out a creative plan and a clear roadmap before any cameras roll.',
+    q: 'Can you help engineer or improve my part?',
+    a: 'Yes. Our design and engineering team offers design-for-manufacture support to help you build the part faster, weld it stronger, and lower the cost, before a single cut is made.',
   },
 ];
 
@@ -169,7 +168,7 @@ export function FAQ() {
               </Heading>
             </Reveal>
             <Reveal delay={140}>
-              <Lead>Everything you need to know before we make something worth watching together.</Lead>
+              <Lead>Everything you need to know before you send us your next job.</Lead>
             </Reveal>
             <Reveal delay={200}>
               <Aside>

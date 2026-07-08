@@ -12,7 +12,7 @@ const Bar = styled.header<{ $scrolled: boolean }>`
   right: 0;
   z-index: 100;
   padding: ${({ $scrolled }) => ($scrolled ? '0.85rem 0' : '1.4rem 0')};
-  background: ${({ $scrolled }) => ($scrolled ? 'rgba(255, 255, 255, 0.88)' : 'transparent')};
+  background: ${({ $scrolled }) => ($scrolled ? 'rgba(14, 15, 18, 0.72)' : 'transparent')};
   backdrop-filter: ${({ $scrolled }) => ($scrolled ? 'blur(16px)' : 'none')};
   border-bottom: 1px solid
     ${({ $scrolled, theme }) => ($scrolled ? theme.colors.border : 'transparent')};
@@ -63,9 +63,8 @@ const NavLink = styled.a`
     background: ${({ theme }) => theme.colors.accent};
     transition: width ${({ theme }) => theme.motion.base};
   }
-  /* Stays muted/gray in both scroll states; brightens to the brand green on
-     hover (true white would be invisible on the light navbar). */
-  &:hover { color: ${({ theme }) => theme.colors.accent}; }
+  /* Muted steel by default; brightens to the brand red on hover. */
+  &:hover { color: ${({ theme }) => theme.colors.text}; }
   &:hover::after { width: 100%; }
 `;
 
@@ -122,7 +121,7 @@ const MobilePanel = styled.div<{ $open: boolean }>`
   inset: 0 0 0 0;
   top: 0;
   z-index: 90;
-  background: rgba(255, 255, 255, 0.98);
+  background: rgba(14, 15, 18, 0.98);
   backdrop-filter: blur(20px);
   display: flex;
   flex-direction: column;
@@ -164,11 +163,11 @@ const Progress = styled.div<{ $value: number }>`
 
 // Root-relative links so the nav works from any page.
 const links = [
-  { href: '/case-studies', label: 'Case Studies' },
-  { href: '/services', label: 'Services' },
-  { href: '/team', label: 'Team' },
+  { href: '/services', label: 'Capabilities' },
+  { href: '/#industries', label: 'Industries' },
+  { href: '/#about', label: 'About' },
   { href: '/#reviews', label: 'Reviews' },
-  { href: site.contact.bookingUrl, label: 'Contact' },
+  { href: site.contact.phoneHref, label: site.contact.phone },
 ];
 
 export function Navigation() {
@@ -200,7 +199,7 @@ export function Navigation() {
       <Progress $value={progress} aria-hidden />
       <Bar $scrolled={scrolled || open}>
         <Inner>
-          <Logo href="/" size={20} mark />
+          <Logo href="/" size={48} image="/portfolio/logo.webp" />
           <NavLinks>
             {links.map((l) => (
               <NavLink key={l.href} href={l.href}>
@@ -209,7 +208,7 @@ export function Navigation() {
             ))}
           </NavLinks>
           <Right>
-            <CTA href={site.contact.bookingUrl}>Book a Call</CTA>
+            <CTA href={site.contact.bookingUrl}>Get a Quote</CTA>
             <Burger
               $open={open}
               onClick={() => setOpen((v) => !v)}
@@ -231,7 +230,7 @@ export function Navigation() {
           </a>
         ))}
         <a className="cta" href={site.contact.bookingUrl} onClick={() => setOpen(false)}>
-          Book a Call →
+          Get a Quote →
         </a>
       </MobilePanel>
     </>

@@ -3,9 +3,9 @@ import { ServicesContent } from '@/components/pages/ServicesContent';
 import { site } from '@/data/site';
 
 export const metadata: Metadata = {
-  title: `Services, ${site.brand}`,
+  title: `Capabilities | ${site.brand}`,
   description:
-    'Video production, photography, UGC, creative strategy, graphic design, social media management, content creation, and website development, one studio for the whole pipeline.',
+    'Laser welding, MIG & TIG welding, laser and plate cutting, CNC bending, 3D tube profiling, machining, coating, and design engineering, every process under one roof in Katy, Texas.',
 };
 
 export default function ServicesPage() {

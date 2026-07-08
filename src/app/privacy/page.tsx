@@ -4,8 +4,8 @@ import { privacyPolicy } from '@/data/legal';
 import { site } from '@/data/site';
 
 export const metadata: Metadata = {
-  title: `Privacy Policy, ${site.brand}`,
-  description: 'How Viridian Films collects, uses, and protects your information.',
+  title: `Privacy Policy | ${site.brand}`,
+  description: `How ${site.brand} collects, uses, and protects your information.`,
 };
 
 export default function PrivacyPage() {

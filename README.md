@@ -1,7 +1,10 @@
-# Viridian Films — Landing Page
+# Laser Weld Inc. — Website
 
-A Next.js 14 + styled-components landing page for Viridian Films (VRDN).
-White-forward, professional, with a viridian/forest-green accent.
+A Next.js 14 + styled-components marketing site for **Laser Weld Inc.**, a
+quality welding and turn-key manufacturing company in Katy, Texas (est. 1994).
+
+Dark, industrial design language: brushed-steel blacks, near-white type, and a
+single hot signal-red accent, built to feel like the shop floor.
 
 ## Run it
 
@@ -18,35 +21,38 @@ Everything that changes often lives in `src/data/` — you rarely need to touch 
 
 | What | File |
 |------|------|
-| Brand, contact info, socials, booking link, hero showreel paths | `src/data/site.ts` |
-| The 8 services | `src/data/services.ts` |
-| Case studies (Laserweld is fully built; add metrics/videos for the rest) | `src/data/caseStudies.ts` |
-| Google reviews + rating ⚠️ **currently placeholders — replace before launch** | `src/data/reviews.ts` |
-| Portfolio gallery photos | `src/data/portfolio.ts` |
+| Brand, address, phone/email, socials, quote link | `src/data/site.ts` |
+| Capabilities, turn-key process, industries, principles | `src/data/services.ts` |
+| Customer reviews + rating ⚠️ **currently placeholders — replace before launch** | `src/data/reviews.ts` |
+| Privacy Policy + Terms of Service copy | `src/data/legal.ts` |
+
+## Design tokens
+
+Colors, fonts, spacing, and motion live in `src/styles/theme.ts`. The accent
+red (`colors.accent`) and the steel-black backgrounds are the two levers for the
+whole look. Fonts: **Space Grotesk** (display), **Inter** (body), **Space Mono**
+(labels), all via `next/font/google`.
 
 ## Media assets (`/public`)
 
-- `showreel.mp4` — hero background video (1080p, ~12 MB, audio stripped, optimized from `weby.mp4`)
-- `showreel-poster.webp` — hero poster frame
-- `portfolio/portfolio-*.webp` — gallery photos (optimized webp)
-
-### Swapping the hero video / adding photos
-Drop a new MP4 into `/public` and point `site.showreel.videoSrc` at it.
-For photos, export as `.webp` (faster than JPG/PNG) and add an entry in
-`src/data/portfolio.ts` with its `width`/`height`.
-
-> The optimizer deps (`sharp`, `ffmpeg-static`) are in devDependencies if you
-> need to re-compress more source footage/photos later.
+- `portfolio/laser.jpg` — the one authentic photograph (the Laser Weld yard),
+  used in the About section. Drop additional shop-floor photography into
+  `/public/portfolio/` and reference it from the relevant section component.
 
 ## Page structure (`src/app/page.tsx`)
 
-Hero → Mission → Services → Portfolio → Results → Case Study (+ Full-Service
-Partnership 01–04) → Google Reviews → Process → Contact → Footer.
+Hero (with live parts-delivered counter) → Capabilities → Process → Industries →
+About (Made in Texas) → Reviews → FAQ → Contact → Footer.
+
+Additional routes: `/services` (full capabilities + turn-key process),
+`/privacy`, `/terms`.
 
 ## Before launch checklist
 
-- [ ] Replace the **placeholder Google reviews** and rating in `src/data/reviews.ts`
-- [ ] Confirm `site.location` and the `bookingUrl` (currently a mailto — swap for Calendly/Cal.com if preferred)
-- [ ] Add real metrics + videos for **The Table** and **Personal Brand** case studies
-- [ ] Add a brand YouTube URL in `site.socials.youtube` if there is one
+- [ ] Replace the **placeholder customer reviews** and rating in `src/data/reviews.ts`
+- [ ] Confirm the address, phone, and email in `src/data/site.ts`
+- [ ] Swap the `bookingUrl` mailto for a real quote form if preferred
+- [ ] Verify the social profile URLs in `site.socials`
+- [ ] Add real shop-floor / equipment photography to `/public/portfolio/`
 - [ ] Add a favicon (`src/app/icon.png`) and an OG image
+- [ ] Have counsel review `src/data/legal.ts` (template, not legal advice)

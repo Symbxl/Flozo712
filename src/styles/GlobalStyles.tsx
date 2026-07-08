@@ -13,6 +13,8 @@ export const GlobalStyles = createGlobalStyle`
 
   html {
     scroll-behavior: smooth;
+    color-scheme: dark;
+    background: ${({ theme }) => theme.colors.bg};
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
@@ -22,7 +24,10 @@ export const GlobalStyles = createGlobalStyle`
     font-family: ${({ theme }) => theme.fonts.body};
     font-size: ${({ theme }) => theme.fontSize.base};
     font-weight: ${({ theme }) => theme.fontWeight.medium};
+    /* Plain charcoal canvas. The hero and the "One facility" band beneath it
+       are transparent, so they read as one continuous surface over this base. */
     background: ${({ theme }) => theme.colors.bg};
+    background-repeat: no-repeat;
     color: ${({ theme }) => theme.colors.text};
     line-height: 1.6;
     overflow-x: hidden;
@@ -66,7 +71,7 @@ export const GlobalStyles = createGlobalStyle`
 
   ::selection {
     background: ${({ theme }) => theme.colors.accent};
-    color: ${({ theme }) => theme.colors.bg};
+    color: #fff;
   }
 
   /* Custom scrollbar */

@@ -3,32 +3,61 @@
 import styled from 'styled-components';
 import { site } from '@/data/site';
 
-// Wordmark with an optional logo mark (used in the nav). The mark is a
-// transparent webp, so it's only shown on light surfaces — the footer
-// (dark) renders the wordmark without it.
+// Wordmark for Laser Weld Inc. A small red "spark" mark (pure CSS, so it
+// works on any surface) sits next to a bold, slightly-condensed wordmark:
+// LASER in solid ink, WELD carrying the red accent.
 const Wrap = styled.a<{ $light?: boolean; $size: number }>`
   display: inline-flex;
   align-items: center;
-  gap: 0.55rem;
+  gap: 0.6rem;
   text-decoration: none;
   line-height: 1;
   font-family: ${({ theme }) => theme.fonts.display};
   font-weight: ${({ theme }) => theme.fontWeight.bold};
   font-size: ${({ $size }) => $size}px;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
   color: ${({ theme, $light }) => ($light ? theme.colors.textInverse : theme.colors.text)};
   transition: color ${({ theme }) => theme.motion.fast};
 
-  & b {
+  & .wm b {
+    font-weight: ${({ theme }) => theme.fontWeight.black};
+  }
+  & .wm i {
+    font-style: normal;
+    color: ${({ theme }) => theme.colors.accent};
     font-weight: ${({ theme }) => theme.fontWeight.black};
   }
 `;
 
-const Mark = styled.img`
-  height: 30px;
-  width: auto;
-  display: block;
+// A red angled "beam" mark, evokes a cutting laser / weld spark.
+const Mark = styled.span`
+  position: relative;
   flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 5px;
+  background: ${({ theme }) => theme.colors.accent};
+  box-shadow: 0 0 14px -2px ${({ theme }) => theme.colors.accent};
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: 46%;
+    width: 3px;
+    height: 160%;
+    background: #fff;
+    transform: rotate(24deg);
+    opacity: 0.9;
+  }
+`;
+
+const Image = styled.img<{ $size: number }>`
+  display: block;
+  height: ${({ $size }) => $size}px;
+  width: auto;
 `;
 
 interface LogoProps {
@@ -36,13 +65,24 @@ interface LogoProps {
   light?: boolean;
   size?: number;
   mark?: boolean;
+  image?: string;
 }
 
-export function Logo({ href = '/', light, size = 20, mark = false }: LogoProps) {
+export function Logo({ href = '/', light, size = 20, mark = false, image }: LogoProps) {
   return (
     <Wrap href={href} aria-label={site.brand} $light={light} $size={size}>
-      {mark && <Mark src="/logo.webp" alt="" aria-hidden />}
-      <span><b>Viridian</b>&nbsp;Films</span>
+      {image ? (
+        // eslint-disable-next-line @next/next/no-img-element
+        <Image src={image} alt={site.brand} $size={size} />
+      ) : (
+        <>
+          {mark && <Mark aria-hidden />}
+          <span className="wm">
+            <b>Laser</b>
+            <i>weld</i>
+          </span>
+        </>
+      )}
     </Wrap>
   );
 }

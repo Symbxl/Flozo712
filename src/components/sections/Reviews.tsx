@@ -61,10 +61,10 @@ const RatingPill = styled.div`
   align-items: center;
   gap: 0.85rem;
   padding: 0.75rem 1.4rem;
-  background: ${({ theme }) => theme.colors.bg};
+  background: ${({ theme }) => theme.colors.bgSurface};
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: 999px;
-  box-shadow: 0 4px 14px -4px rgba(20, 36, 29, 0.08);
+  box-shadow: 0 4px 14px -4px #000;
 
   & .score { font-family: ${({ theme }) => theme.fonts.display}; font-weight: 700; font-size: 1.05rem; color: ${({ theme }) => theme.colors.text}; }
   & .divider { width: 1px; height: 18px; background: ${({ theme }) => theme.colors.border}; }
@@ -87,14 +87,15 @@ const Card = styled.div`
   gap: 1.1rem;
   padding: 2rem 1.85rem;
   height: 100%;
-  background: ${({ theme }) => theme.colors.bg};
+  background: ${({ theme }) => theme.colors.bgSurface};
   border: 1px solid ${({ theme }) => theme.colors.border};
   border-radius: ${({ theme }) => theme.radius.lg};
+  box-shadow: 0 1px 2px rgba(22, 23, 26, 0.04), 0 14px 30px -24px rgba(22, 23, 26, 0.16);
   transition: all ${({ theme }) => theme.motion.base};
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: 0 22px 44px -22px rgba(20, 36, 29, 0.22);
+    box-shadow: 0 24px 50px -28px rgba(22, 23, 26, 0.22);
     border-color: ${({ theme }) => theme.colors.borderStrong};
   }
 `;
@@ -160,12 +161,13 @@ const ViewAll = styled.a`
   gap: 0.6rem;
   padding: 1rem 1.75rem;
   border-radius: 999px;
-  background: ${({ theme }) => theme.colors.text};
+  background: ${({ theme }) => theme.colors.accent};
   color: #fff;
   font-weight: 600;
   font-size: 0.92rem;
+  box-shadow: 0 14px 40px -16px ${({ theme }) => theme.colors.accent};
   transition: all ${({ theme }) => theme.motion.base};
-  &:hover { background: ${({ theme }) => theme.colors.accent}; transform: translateY(-2px); }
+  &:hover { background: ${({ theme }) => theme.colors.accentHot}; transform: translateY(-2px); }
 `;
 
 function GoogleG({ size = 20 }: { size?: number }) {
@@ -185,7 +187,7 @@ function Stars({ rating, size = 16 }: { rating: number; size?: number }) {
       {[1, 2, 3, 4, 5].map((n) => (
         <svg key={n} width={size} height={size} viewBox="0 0 24 24" aria-hidden style={{ display: 'block' }}>
           <path
-            fill={n <= Math.round(rating) ? '#FBBC05' : '#e4e4e7'}
+            fill={n <= Math.round(rating) ? '#FBBC05' : 'rgba(255, 255, 255, 0.16)'}
             d="M12 17.27l5.18 3.13-1.37-5.9 4.58-3.97-6.03-.52L12 4.5 9.64 10.08l-6.03.52 4.58 3.97-1.37 5.9z"
           />
         </svg>
@@ -237,9 +239,9 @@ export function Reviews() {
       <Container $wide>
         <Reveal>
           <Head>
-            <Label>Client Reviews</Label>
+            <Label>Customer Reviews</Label>
             <Title>
-              What our clients <span>say on Google</span>
+              Trusted by the people who <span>build hard things</span>
             </Title>
             <RatingPill>
               <GoogleG size={22} />

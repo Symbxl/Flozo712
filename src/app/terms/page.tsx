@@ -4,8 +4,8 @@ import { termsOfService } from '@/data/legal';
 import { site } from '@/data/site';
 
 export const metadata: Metadata = {
-  title: `Terms of Service, ${site.brand}`,
-  description: 'The terms that govern your use of the Viridian Films website.',
+  title: `Terms of Service | ${site.brand}`,
+  description: `The terms that govern your use of the ${site.brand} website.`,
 };
 
 export default function TermsPage() {

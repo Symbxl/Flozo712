@@ -1,8 +1,12 @@
 import { Navigation } from '@/components/Navigation';
 import { Hero } from '@/components/sections/Hero';
-import { CaseStudyShowcase } from '@/components/sections/CaseStudyShowcase';
+import { Services } from '@/components/sections/Services';
+import { WatchOnYouTube } from '@/components/sections/WatchOnYouTube';
+import { Process } from '@/components/sections/Process';
+import { Industries } from '@/components/sections/Industries';
 import { Feature } from '@/components/sections/Feature';
 import { Reviews } from '@/components/sections/Reviews';
+import { BookCall } from '@/components/sections/BookCall';
 import { FAQ } from '@/components/sections/FAQ';
 import { Footer } from '@/components/sections/Footer';
 
@@ -12,9 +16,11 @@ export default function HomePage() {
       <Navigation />
       <main>
         <Hero />
-        <CaseStudyShowcase />
-        <Reviews />
-        <Feature />
+        <Services />
+        <WatchOnYouTube />
+        <Industries />
+        <Process />
+        <BookCall />
         <FAQ />
       </main>
       <Footer />

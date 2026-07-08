@@ -1,49 +1,61 @@
-// Viridian Films, design tokens.
-// White-forward, professional, with a refined viridian/forest-green accent
-// (a nod to the brand name, nature-ish, never neon) and a deep green-black ink.
+// Laser Weld Inc., design tokens.
+// Dark, industrial: a deep charcoal shop-floor canvas, cool off-white ink,
+// and the same single bright signal-red accent (#EB4036, matched to
+// laserweldinc.com). Surfaces step *lighter* as they rise (bg → elevated
+// bands → cards), while the contact card and footer sink to near-black to
+// anchor the layout and carry white text.
 
 export const theme = {
   colors: {
-    // Backgrounds, white-forward with faintly green-tinted surfaces.
-    bg: '#FFFFFF',
-    bgElevated: '#F5F8F6',
-    bgSurface: '#ECF2EE',
-    bgInverse: '#0E1F18', // deep forest near-black (dark sections / footer)
+    // Backgrounds, deep charcoal base stepping *up* to lighter cards/bands.
+    bg: '#0E0F12', // base near-black charcoal
+    bgElevated: '#16181D', // raised bands (reviews / industries strips)
+    bgSurface: '#1E2027', // cards / panels (lightest step, pops off the bg)
+    bgInverse: '#08090B', // near-black anchor bands (footer, CTA card)
 
-    // Text, deep green-black on white, with muted / dim steps.
-    text: '#14241D',
-    textMuted: '#48564F',
-    textDim: '#7A8881',
-    textInverse: '#FFFFFF',
+    // Text, cool off-white ink on charcoal, with muted / dim steps.
+    text: '#F4F5F7',
+    textMuted: '#A2A4AC',
+    textDim: '#70727A',
+    textInverse: '#FFFFFF', // text on the near-black anchor bands
 
-    // Accents, viridian green, plus a deeper pine for "hot" emphasis.
-    accent: '#2E7D5B',
-    accentHot: '#1C5B41',
-    accentSoft: 'rgba(46, 125, 91, 0.10)',
+    // Accent, bright signal red (laserweldinc.com), plus a deeper press state.
+    accent: '#EB4036',
+    accentHot: '#CE2A20',
+    accentSoft: 'rgba(235, 64, 54, 0.16)',
 
-    // A warm, earthy secondary, used sparingly for highlights / metric pills.
-    sand: '#C2A878',
-    sandSoft: 'rgba(194, 168, 120, 0.14)',
+    // Warm amber, used sparingly for a secondary highlight.
+    sand: '#E8992E',
+    sandSoft: 'rgba(224, 138, 30, 0.18)',
 
-    // Positive growth (review stars, "up" pills) keep a brighter natural green.
-    growth: '#1F9D57',
-    growthSoft: 'rgba(31, 157, 87, 0.12)',
+    // Positive / "up" indicators keep the brand red so nothing competes.
+    growth: '#EB4036',
+    growthSoft: 'rgba(235, 64, 54, 0.16)',
 
-    // Borders & dividers, dark-on-light, kept subtle.
-    border: 'rgba(20, 36, 29, 0.10)',
-    borderStrong: 'rgba(20, 36, 29, 0.20)',
+    // Borders & dividers, light-on-dark, kept subtle.
+    border: 'rgba(255, 255, 255, 0.10)',
+    borderStrong: 'rgba(255, 255, 255, 0.20)',
 
-    // Gradients (used as CSS strings), soft green washes on white.
+    // Gradients (used as CSS strings), a faint red warmth over the dark canvas.
     gradientHero:
-      'radial-gradient(ellipse at 28% 16%, rgba(46,125,91,0.14) 0%, transparent 52%), radial-gradient(ellipse at 84% 88%, rgba(28,91,65,0.08) 0%, transparent 55%), #FFFFFF',
-    gradientText: '#14241D',
+      'radial-gradient(ellipse at 82% -12%, rgba(235,64,54,0.14) 0%, transparent 52%), radial-gradient(ellipse at 4% 108%, rgba(235,64,54,0.08) 0%, transparent 55%), #0E0F12',
+
+    // App-wide ambient: a soft red glow (no base fill) that sits behind the
+    // whole page and fades downward from the top. It gives the hero, the
+    // "One facility" band directly beneath it, and every inner-page header one
+    // continuous red-tinted charcoal backdrop — the shared theme of the app.
+    gradientAmbient:
+      'radial-gradient(135% 2300px at 88% -170px, rgba(235,64,54,0.26) 0%, rgba(235,64,54,0.12) 32%, rgba(235,64,54,0.035) 60%, transparent 84%), radial-gradient(95% 1500px at -8% 340px, rgba(235,64,54,0.10) 0%, transparent 64%)',
+    gradientText: '#F4F5F7',
   },
 
   fonts: {
+    // Matches carbyn.ai: Google Sans Flex for display + body, JetBrains Mono
+    // for meta/labels. Inter is a close metric fallback during font swap.
     display:
-      "var(--font-jakarta), 'Plus Jakarta Sans', var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
-    body: "var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
-    mono: "var(--font-mono), 'JetBrains Mono', 'SF Mono', Menlo, monospace",
+      "'Google Sans Flex', var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+    body: "'Google Sans Flex', var(--font-inter), 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif",
+    mono: "var(--font-jetbrains-mono), 'JetBrains Mono', 'SF Mono', Menlo, monospace",
   },
 
   // Type scale. Fluid, bold, editorial.
@@ -69,7 +81,7 @@ export const theme = {
   },
 
   letterSpacing: {
-    display: '-0.03em',
+    display: '-0.02em',
     body: '0',
     meta: '0.18em',
     wide: '0.32em',

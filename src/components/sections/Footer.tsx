@@ -6,7 +6,7 @@ import { Logo } from '../Logo';
 import { site } from '@/data/site';
 
 const Wrap = styled.footer`
-  background: ${({ theme }) => theme.colors.bgInverse};
+  background: ${({ theme }) => theme.colors.bg};
   color: ${({ theme }) => theme.colors.textInverse};
   padding: 4.5rem 0 2.25rem;
 `;
@@ -76,10 +76,7 @@ const Bottom = styled.div`
 `;
 
 const Copy = styled.span`
-  font-family: ${({ theme }) => theme.fonts.mono};
-  font-size: ${({ theme }) => theme.fontSize.xs};
-  text-transform: uppercase;
-  letter-spacing: 0.14em;
+  font-size: ${({ theme }) => theme.fontSize.sm};
   color: rgba(255, 255, 255, 0.5);
 
   & strong { color: #fff; font-weight: ${({ theme }) => theme.fontWeight.semibold}; }
@@ -101,10 +98,7 @@ const Right = styled.div`
     gap: 1.25rem;
   }
   & .legal a {
-    font-family: ${({ theme }) => theme.fonts.mono};
-    font-size: ${({ theme }) => theme.fontSize.xs};
-    text-transform: uppercase;
-    letter-spacing: 0.14em;
+    font-size: ${({ theme }) => theme.fontSize.sm};
     color: rgba(255, 255, 255, 0.5);
     transition: color ${({ theme }) => theme.motion.fast};
   }
@@ -122,12 +116,11 @@ const Right = styled.div`
 `;
 
 const nav = [
-  { href: '/case-studies', label: 'Case Studies' },
-  { href: '/services', label: 'Services' },
-  { href: '/team', label: 'Team' },
+  { href: '/services', label: 'Capabilities' },
+  { href: '/#industries', label: 'Industries' },
+  { href: '/#about', label: 'About' },
   { href: '/#reviews', label: 'Reviews' },
-  { href: '/#process', label: 'Process' },
-  { href: site.contact.bookingUrl, label: 'Contact' },
+  { href: site.contact.bookingUrl, label: 'Request a Quote' },
 ];
 
 export function Footer() {
@@ -153,18 +146,20 @@ export function Footer() {
             <h6>Connect</h6>
             <ul>
               <li><a href={socials.instagram} target="_blank" rel="noreferrer">Instagram ↗</a></li>
+              <li><a href={socials.youtube} target="_blank" rel="noreferrer">YouTube ↗</a></li>
               <li><a href={socials.tiktok} target="_blank" rel="noreferrer">TikTok ↗</a></li>
-              {socials.youtube && (
-                <li><a href={socials.youtube} target="_blank" rel="noreferrer">YouTube ↗</a></li>
+              {socials.facebook && (
+                <li><a href={socials.facebook} target="_blank" rel="noreferrer">Facebook ↗</a></li>
               )}
             </ul>
           </Col>
           <Col>
             <h6>Contact</h6>
             <ul>
-              <li><a href={`mailto:${contact.email}`}>{contact.email}</a></li>
+              <li><a href={site.address.mapUrl} target="_blank" rel="noreferrer">{site.address.full}</a></li>
               <li><a href={contact.phoneHref}>{contact.phone}</a></li>
-              <li><a href={contact.bookingUrl}>Book a call →</a></li>
+              <li><a href={`mailto:${contact.email}`}>{contact.email}</a></li>
+              <li><a href={contact.bookingUrl}>Request a quote →</a></li>
             </ul>
           </Col>
         </Top>
@@ -176,12 +171,11 @@ export function Footer() {
               <a href="/privacy">Privacy Policy</a>
               <a href="/terms">Terms of Service</a>
             </div>
-            <a className="credit" href={credits.designerUrl} target="_blank" rel="noreferrer">
-              Website designed by <strong>{credits.designer}</strong>
-            </a>
-            <a className="credit" href={credits.partnerUrl} target="_blank" rel="noreferrer">
-              In partnership with <strong>{credits.partner}</strong>
-            </a>
+            {credits.partner && (
+              <a className="credit" href={credits.partnerUrl} target="_blank" rel="noreferrer">
+                In partnership with <strong>{credits.partner}</strong>
+              </a>
+            )}
           </Right>
         </Bottom>
       </Inner>

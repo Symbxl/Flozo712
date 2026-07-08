@@ -128,11 +128,11 @@ const buttonReset = css`
 export const PrimaryButton = styled.a`
   ${buttonReset};
   background: ${({ theme }) => theme.colors.accent};
-  color: ${({ theme }) => theme.colors.bg};
+  color: #fff;
 
   &:hover {
     background: ${({ theme }) => theme.colors.accentHot};
-    color: ${({ theme }) => theme.colors.bg};
+    color: #fff;
     transform: translateY(-2px);
   }
 `;
