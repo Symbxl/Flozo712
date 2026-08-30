@@ -21,7 +21,7 @@ const Top = styled.div`
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
 
   @media (min-width: ${({ theme }) => theme.breakpoints.md}) {
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
     gap: 3.5rem;
   }
 `;
@@ -140,17 +140,6 @@ export function Footer() {
               {nav.map((l) => (
                 <li key={l.href}><a href={l.href}>{l.label}</a></li>
               ))}
-            </ul>
-          </Col>
-          <Col>
-            <h6>Connect</h6>
-            <ul>
-              <li><a href={socials.instagram} target="_blank" rel="noreferrer">Instagram ↗</a></li>
-              <li><a href={socials.youtube} target="_blank" rel="noreferrer">YouTube ↗</a></li>
-              <li><a href={socials.tiktok} target="_blank" rel="noreferrer">TikTok ↗</a></li>
-              {socials.facebook && (
-                <li><a href={socials.facebook} target="_blank" rel="noreferrer">Facebook ↗</a></li>
-              )}
             </ul>
           </Col>
           <Col>
