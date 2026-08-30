@@ -126,28 +126,28 @@ const Answer = styled.p`
 
 const faqs = [
   {
-    q: 'What materials and processes do you work with?',
-    a: 'Steel, stainless, and aluminum across MIG, TIG, and laser welding, plus laser and plate cutting, CNC tube and plate bending, 3D tube profiling, machining, coating, and laser cleaning, all under one roof.',
+    q: 'What does Flozo Media actually do?',
+    a: 'We are a full-service organic content team for local businesses. We plan the strategy, film on location, edit in-house, and publish everywhere your customers scroll — short-form video, social media management, YouTube, and local SEO, all from one team.',
   },
   {
-    q: 'Do you handle small orders, or only large production runs?',
-    a: 'Both. From a single one-off part or prototype to production runs in the thousands, from big to small, we do it all. The same quality standard applies no matter the quantity.',
+    q: 'What kinds of businesses do you work with?',
+    a: 'Local businesses of every kind — restaurants and cafés, home services, health and wellness, real estate, retail, and automotive. If your customers live nearby, we know how to reach them.',
   },
   {
-    q: 'How do I get a quote?',
-    a: 'Send us your prints, a CAD file, or even a rough sketch, along with material, quantity, and your timeline. We review the job, engineer it for manufacturability, and get you a fast, honest quote back as swiftly as possible.',
+    q: 'How do we get started?',
+    a: 'Book a free discovery call. Tell us about your business, your customers, and your goals — we audit your current presence, find the fastest wins, and come back with a content plan built for your local market.',
   },
   {
-    q: 'How fast can you turn a job around?',
-    a: 'Lead time depends on scope and material availability, but running every process in-house lets us move fast, no waiting on outside vendors. We ship an average of 1,754 parts a day and will commit to a firm schedule up front.',
+    q: 'Do I have to be on camera?',
+    a: 'Only as much as you want to be. Content performs best when customers see the real people behind a business, but we can build the plan around your team, your craft, and your customers instead — and we direct every filming day, so nobody has to perform.',
   },
   {
-    q: 'Do you deliver, and which industries do you serve?',
-    a: `We deliver on our own trucks and serve oil & gas, aerospace, wastewater, data centers, material handling, and structural fabrication. We are based in ${site.location} and ship across Texas and beyond.`,
+    q: 'Where are you located, and do you come to us?',
+    a: `We are based out of ${site.location}, and yes — we come to you. We film on location at your business across the Eastside and greater Seattle area, and manage social presence remotely for clients further out.`,
   },
   {
-    q: 'Can you help engineer or improve my part?',
-    a: 'Yes. Our design and engineering team offers design-for-manufacture support to help you build the part faster, weld it stronger, and lower the cost, before a single cut is made.',
+    q: 'How soon will I see results?',
+    a: 'Organic content compounds. Engagement usually climbs within the first month, and real business results — calls, bookings, foot traffic — build as consistency does its work. You get a plain-English report every month, so you always know what is working.',
   },
 ];
 
@@ -168,7 +168,7 @@ export function FAQ() {
               </Heading>
             </Reveal>
             <Reveal delay={140}>
-              <Lead>Everything you need to know before you send us your next job.</Lead>
+              <Lead>Everything you need to know before you book a call.</Lead>
             </Reveal>
             <Reveal delay={200}>
               <Aside>

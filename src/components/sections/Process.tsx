@@ -3,6 +3,7 @@
 import styled from 'styled-components';
 import { Container, Section, SectionLabel, H2, Lead } from '../primitives';
 import { Reveal } from '../Reveal';
+import { process } from '@/data/services';
 
 // Flat base charcoal (theme.colors.bg) to match the "One facility" band and the
 // hero — the whole home page reads as one continuous surface — with a faint
@@ -82,7 +83,7 @@ const Phase = styled.article`
     z-index: 2;
   }
 
-  /* The destination node reads a touch heavier — the "finished part". */
+  /* The destination node reads a touch heavier — the end of the pipeline. */
   &:last-child .dot {
     box-shadow:
       0 0 0 4px ${({ theme }) => theme.colors.bg},
@@ -199,33 +200,6 @@ const PhaseBody = styled.p`
   line-height: 1.65;
 `;
 
-const phases = [
-  {
-    step: 'Step 01',
-    when: 'Fast Quote',
-    title: 'Quote & Approval',
-    body: 'Send prints or a sketch. We review the job, engineer for manufacturability, and get you a fast, honest quote to approve.',
-  },
-  {
-    step: 'Step 02',
-    when: 'Programmed',
-    title: 'Engineering & Setup',
-    body: 'We program the lasers, nest the material, and set up the line so the first part off the machine is already right.',
-  },
-  {
-    step: 'Step 03',
-    when: 'In-House',
-    title: 'Fabrication',
-    body: 'Cut, bent, welded, machined, and coated in one facility. One team owns the part from raw steel to finished assembly.',
-  },
-  {
-    step: 'Step 04',
-    when: 'On Schedule',
-    title: 'Delivery',
-    body: 'Inspected, packaged, and delivered on our own trucks, on time and ready to install, 1,754 parts on an average day.',
-  },
-];
-
 export function Process() {
   return (
     <Wrap id="process">
@@ -236,22 +210,22 @@ export function Process() {
         </Reveal>
         <Reveal delay={80}>
           <Heading>
-            From print to <em>finished part</em>.
+            From first call to <em>content that converts</em>.
           </Heading>
         </Reveal>
         <Reveal delay={140}>
-          <Lead>A straightforward, turn-key process that keeps your job moving, quoted fast, built right, and delivered on schedule.</Lead>
+          <Lead>A simple, done-for-you process that keeps your content moving — planned with purpose, filmed on location, and published on schedule.</Lead>
         </Reveal>
 
         <Timeline>
-          {phases.map((p, i) => (
-            <Reveal key={p.step} delay={180 + i * 80}>
+          {process.map((p, i) => (
+            <Reveal key={p.n} delay={180 + i * 80}>
               <Phase>
                 <span className="dot" aria-hidden="true" />
-                <Index>{String(i + 1).padStart(2, '0')}</Index>
+                <Index>{p.n}</Index>
                 <When>{p.when}</When>
                 <PhaseTitle>{p.title}</PhaseTitle>
-                <PhaseBody>{p.body}</PhaseBody>
+                <PhaseBody>{p.desc}</PhaseBody>
               </Phase>
             </Reveal>
           ))}

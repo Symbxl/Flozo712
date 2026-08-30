@@ -116,11 +116,11 @@ const Right = styled.div`
 `;
 
 const nav = [
-  { href: '/services', label: 'Capabilities' },
+  { href: '/services', label: 'Services' },
   { href: '/#industries', label: 'Industries' },
   { href: '/#about', label: 'About' },
   { href: '/#reviews', label: 'Reviews' },
-  { href: site.contact.bookingUrl, label: 'Request a Quote' },
+  { href: site.contact.bookingUrl, label: 'Book a Call' },
 ];
 
 export function Footer() {
@@ -156,10 +156,11 @@ export function Footer() {
           <Col>
             <h6>Contact</h6>
             <ul>
-              <li><a href={site.address.mapUrl} target="_blank" rel="noreferrer">{site.address.full}</a></li>
+              {/* City-level only — no public street address. */}
+              <li>{site.address.full}</li>
               <li><a href={contact.phoneHref}>{contact.phone}</a></li>
               <li><a href={`mailto:${contact.email}`}>{contact.email}</a></li>
-              <li><a href={contact.bookingUrl}>Request a quote →</a></li>
+              <li><a href={contact.bookingUrl}>Book a call →</a></li>
             </ul>
           </Col>
         </Top>

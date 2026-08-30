@@ -1,5 +1,5 @@
 // =====================================================================
-//  Capabilities, process, industries and principles for Laser Weld Inc.
+//  Services, process, industries and principles for Flozo Media.
 //  This is the content hub for the Services grid, the home Process band,
 //  the Industries strip, and the About section.
 // =====================================================================
@@ -8,59 +8,71 @@ export interface Service {
   num: string;
   title: string;
   desc: string;
-  // Optional hero image for the capability selector card. Drop a path in here
-  // (e.g. '/capabilities/laser-welding.webp') and it replaces the placeholder
+  // Optional hero image for the service selector card. Drop a path in here
+  // (e.g. '/services/short-form-video.webp') and it replaces the placeholder
   // frame automatically — no component changes needed.
   image?: string;
+  // Optional live examples for the service selector card. Instagram post/reel
+  // permalinks embedded in place of the image/placeholder frame, under the
+  // given label. Takes precedence over `image`.
+  examples?: {
+    label: string;
+    urls: string[];
+  };
 }
 
-// Core capabilities (shown in the Capabilities / Services grid).
+// Core services (shown in the Services grid).
 export const services: Service[] = [
   {
     num: '01',
-    title: 'Laser Welding',
-    desc: 'Precision laser welds with minimal heat distortion and a clean, near-finished seam, ideal for thin gauge, tight tolerances, and high-repeat production.',
+    title: 'Short-Form Video',
+    desc: 'Scroll-stopping TikToks, Reels, and Shorts, filmed and edited to hook in the first second and built around what your customers actually watch and share.',
+    examples: {
+      label: 'Reels',
+      urls: [
+        'https://www.instagram.com/p/DZ8adQNSSAD/',
+        'https://www.instagram.com/p/DZk8pGnPtBT/',
+      ],
+    },
   },
   {
     num: '02',
-    title: 'MIG & TIG Welding',
-    desc: 'Certified MIG and TIG welders for steel, stainless, and aluminum, from one-off structural work to full production runs.',
+    title: 'Social Media Management',
+    desc: 'Full ownership of your profiles — posting, captions, comments, and DMs — so your business shows up every day without you lifting a finger.',
+    image: '/ssm.png',
   },
   {
     num: '03',
-    title: 'Laser & Plate Cutting',
-    desc: 'High-speed flat-sheet and plate cutting on the largest Trumpf lasers in America, clean edges, tight nesting, zero secondary work.',
+    title: 'Content Strategy',
+    desc: 'A monthly content plan built on your goals, your audience, and your local market, so every post has a job to do before we hit record.',
+    image: '/strat.png',
   },
   {
     num: '04',
-    title: 'CNC Bending',
-    desc: 'Tube and plate bending with press-brake precision and repeatable accuracy across the full run, from prototypes to thousands of parts.',
+    title: 'On-Location Production',
+    desc: 'We come to you. Filming days at your business that capture the real story — your team, your craft, and your customers.',
+    image: '/pro.png',
   },
   {
     num: '05',
-    title: '3D Tube Profiling',
-    desc: 'Multi-axis tube laser profiling for complex intersections, holes, and copes, engineered to drop straight into assembly.',
+    title: 'YouTube Channel Growth',
+    desc: 'Long-form video that compounds. We plan, script, film, and optimize a channel that keeps earning views and customers for years.',
+    image: '/yt.png',
   },
   {
     num: '06',
-    title: 'Machining',
-    desc: 'In-house machining to finish, drill, and tolerance your parts so they leave the floor ready to install, no outside handoffs.',
-  },
-  {
-    num: '07',
-    title: 'Coating & Laser Cleaning',
-    desc: 'Surface prep, laser cleaning, and durable coating that protect the part and deliver the finish your spec calls for.',
-  },
-  {
-    num: '08',
-    title: 'Design & Engineering',
-    desc: 'Design-for-manufacture support up front, we help engineer the part to build faster, weld stronger, and cost less.',
+    title: 'Local SEO & Google Business',
+    desc: 'Optimized profiles, reviews, and local search presence, so you are the first result when neighbors look for what you do.',
+    image: '/seo.png',
   },
 ];
 
-// Turn-key process, mirrored on the home Process band and the Services page.
+// How-we-work process, mirrored on the home Process band and the Services page.
+// `when` is the short mono eyebrow label shown above each step title on the
+// home timeline.
 export interface ProcessStep {
   n: string;
+  when: string;
   title: string;
   desc: string;
 }
@@ -68,28 +80,33 @@ export interface ProcessStep {
 export const process: ProcessStep[] = [
   {
     n: '01',
-    title: 'Quote & Approval',
-    desc: 'Send us your prints or a sketch. We review the job, engineer for manufacturability, and get you a fast, honest quote to approve.',
+    when: 'Free Call',
+    title: 'Discovery Call',
+    desc: 'Tell us about your business, your customers, and your goals. We audit your current presence and find the fastest wins.',
   },
   {
     n: '02',
-    title: 'Engineering & Setup',
-    desc: 'We program the lasers, nest the material, and set up the line, so the first part off the machine is already right.',
+    when: 'Custom Plan',
+    title: 'Content Strategy',
+    desc: 'We build your content plan — pillars, platforms, and a publishing calendar — so every post has a purpose before we hit record.',
   },
   {
     n: '03',
-    title: 'Fabrication',
-    desc: 'Cut, bent, welded, machined, and coated in one facility. One team owns the part from raw steel to finished assembly.',
+    when: 'On Location',
+    title: 'Create & Publish',
+    desc: 'We film on location, edit in-house, and publish on schedule. One team owns your content from idea to posted.',
   },
   {
     n: '04',
-    title: 'Delivery',
-    desc: 'Inspected, packaged, and delivered on our own trucks, on schedule and ready to install. 1,754 parts ship on an average day.',
+    when: 'Every Month',
+    title: 'Grow & Report',
+    desc: 'We track what works, double down, and send a plain-English report every month. Content that compounds, not campaigns that expire.',
   },
 ];
 
-// Trusted-by client logos (mirrors the "Trusted By" strip on laserweldinc.com).
-// Each card links out to the company's own site.
+// Trusted-by client logos.
+// ⚠️ PLACEHOLDER logos carried over from the previous site — swap in real
+// client logos before launch. Each card links out to the company's own site.
 export interface TrustedCompany {
   name: string;
   logo: string;
@@ -108,7 +125,7 @@ export const trustedBy: TrustedCompany[] = [
 ];
 
 // Industries served. Each carries a short, concrete descriptor of what we
-// build for that sector, used by the Industries strip on the home page.
+// create for that sector, used by the Industries strip on the home page.
 export interface Industry {
   name: string;
   blurb: string;
@@ -116,28 +133,28 @@ export interface Industry {
 
 export const industries: Industry[] = [
   {
-    name: 'Oil & Gas',
-    blurb: 'Pressure-rated skids, vessels, and separators built to hold under downhole conditions.',
+    name: 'HVAC',
+    blurb: 'Seasonal tips, install stories, and honest explainers that make you the first call when the AC dies in July.',
   },
   {
-    name: 'Aerospace',
-    blurb: 'Flight-critical assemblies held to tolerances measured in thousandths of an inch.',
+    name: 'Plumbing',
+    blurb: 'Job-site videos and before-and-afters that win the emergency call — and the remodel that comes after it.',
   },
   {
-    name: 'Wastewater',
-    blurb: 'Corrosion-resistant tanks, screens, and frames engineered to run for decades.',
+    name: 'Electrical',
+    blurb: 'Safety-first content that builds trust with homeowners before your crew ever steps through the door.',
   },
   {
-    name: 'Data Centers',
-    blurb: 'Enclosures, racks, and cooling structures built for mission-critical uptime.',
+    name: 'Roofing & Exteriors',
+    blurb: 'Drone shots and dramatic transformations that sell the whole neighborhood while your crew is still on the roof.',
   },
   {
-    name: 'Material Handling',
-    blurb: 'Conveyors, frames, and heavy weldments that run every shift without fail.',
+    name: 'Landscaping & Lawn Care',
+    blurb: 'Transformation reels that turn one manicured yard into ten calls from the same street.',
   },
   {
-    name: 'Structural & Fabrication',
-    blurb: 'Load-bearing steel and weldments that meet code and pass inspection first time.',
+    name: 'Remodeling & Painting',
+    blurb: 'Time-lapse builds and finished reveals that close your next three estimates before you quote them.',
   },
 ];
 
@@ -149,15 +166,15 @@ export interface Principle {
 
 export const principles: Principle[] = [
   {
-    title: 'Reliability & Consistency',
-    desc: 'Part number one and part number one million leave the floor identical. Repeatable quality you can build a schedule on.',
+    title: 'Consistency Over Virality',
+    desc: 'One viral clip does not build a business. Showing up every week does. We build systems that publish on schedule, every time.',
   },
   {
-    title: 'Safety & Quality Assurance',
-    desc: 'Inspected at every stage against your spec. A culture built on trust, dignity, and doing the job right the first time.',
+    title: 'Authenticity First',
+    desc: 'People buy from people. We film the real you — your team, your work, your story — because that is the content your customers trust.',
   },
   {
-    title: 'Innovation & Adaptability',
-    desc: 'We invest in the newest laser and automation technology so American manufacturing competes, and wins, on speed and price.',
+    title: 'Data-Driven Creativity',
+    desc: 'Every post teaches us something. We track what your audience watches, saves, and shares, then double down on what works.',
   },
 ];

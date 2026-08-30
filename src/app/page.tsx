@@ -1,7 +1,6 @@
 import { Navigation } from '@/components/Navigation';
 import { Hero } from '@/components/sections/Hero';
 import { Services } from '@/components/sections/Services';
-import { WatchOnYouTube } from '@/components/sections/WatchOnYouTube';
 import { Process } from '@/components/sections/Process';
 import { Industries } from '@/components/sections/Industries';
 import { Feature } from '@/components/sections/Feature';
@@ -17,7 +16,6 @@ export default function HomePage() {
       <main>
         <Hero />
         <Services />
-        <WatchOnYouTube />
         <Industries />
         <Process />
         <BookCall />

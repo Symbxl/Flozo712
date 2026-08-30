@@ -1,6 +1,8 @@
-// Real data scraped from the LaserWeld Texas YouTube channel
-// (https://www.youtube.com/@LaserWeldTexas) — powers the "View this process on
-// YouTube" section, a 1:1 YouTube watch-page replica embedded on the homepage.
+// ⚠️ PLACEHOLDER channel — this is real data from the LaserWeld Texas YouTube
+// channel (https://www.youtube.com/@LaserWeldTexas), kept for now as a live
+// example of what organic long-form content does for a local business. Swap in
+// the Flozo Media channel (or a client channel) here when it exists — it powers
+// the YouTube section, a 1:1 watch-page replica embedded on the homepage.
 
 export const youtube = {
   channelName: 'LaserWeld Texas',

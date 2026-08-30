@@ -1,14 +1,12 @@
 'use client';
 
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { Container } from '../primitives';
-import { trustedBy } from '@/data/services';
 
 // =====================================================================
 //  Home hero — 1:1 with the CARBYN layout (hero.png):
 //  a big left-aligned BLACK grotesk headline, a short muted subhead,
-//  two equal rounded photo cards (right one carries a coral pill) with
-//  centered black captions, and a large "Trusted by" client-logo strip.
+//  and two equal rounded photo cards with centered black captions.
 // =====================================================================
 
 const Wrap = styled.section`
@@ -79,7 +77,8 @@ const Cell = styled.figure`
 
 const PhotoCard = styled.div`
   position: relative;
-  aspect-ratio: 19 / 10;
+  /* A touch taller than the original 19 / 10. */
+  aspect-ratio: 18 / 10;
   border-radius: 20px;
   overflow: hidden;
   background: ${({ theme }) => theme.colors.bgInverse};
@@ -93,38 +92,6 @@ const PhotoCard = styled.div`
   }
 `;
 
-const glow = keyframes`
-  0%, 100% { opacity: 0.5; }
-  50% { opacity: 1; }
-`;
-
-const Pill = styled.span`
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  z-index: 2;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  padding: 0.34rem 0.72rem;
-  border-radius: 999px;
-  background: ${({ theme }) => theme.colors.accent};
-  color: #fff;
-  font-family: ${({ theme }) => theme.fonts.mono};
-  font-size: 0.6rem;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  font-weight: 700;
-
-  & .dot {
-    width: 6px;
-    height: 6px;
-    border-radius: 999px;
-    background: #fff;
-    animation: ${glow} 1.6s ease-in-out infinite;
-  }
-`;
-
 const Caption = styled.figcaption`
   text-align: center;
   font-family: ${({ theme }) => theme.fonts.display};
@@ -134,158 +101,55 @@ const Caption = styled.figcaption`
   color: ${({ theme }) => theme.colors.text};
 `;
 
-const Trust = styled.div`
-  margin-top: clamp(3.25rem, 6vw, 5rem);
-`;
-
-const TrustHead = styled.h2`
-  font-family: ${({ theme }) => theme.fonts.display};
-  font-weight: ${({ theme }) => theme.fontWeight.bold};
-  font-size: clamp(1.75rem, 1.1rem + 2.4vw, 3rem);
-  line-height: 1;
-  letter-spacing: -0.03em;
-  margin: 0 0 clamp(1.75rem, 3.5vw, 2.75rem);
-  color: ${({ theme }) => theme.colors.text};
-`;
-
-// Marquee constrained to the content column — it lines up with the nav logo on
-// the left and the "Get a Quote" button on the right, and never runs past them.
-// A short fade at each edge keeps logos from popping in/out abruptly.
-const Marquee = styled.div`
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  -webkit-mask-image: linear-gradient(
-    90deg,
-    transparent 0,
-    #000 40px,
-    #000 calc(100% - 40px),
-    transparent 100%
-  );
-  mask-image: linear-gradient(
-    90deg,
-    transparent 0,
-    #000 40px,
-    #000 calc(100% - 40px),
-    transparent 100%
-  );
-`;
-
-// Four identical copies of the logo list sit in the track; sliding it left by
-// exactly one copy (25%) loops seamlessly.
-const marquee = keyframes`
-  from { transform: translateX(0); }
-  to { transform: translateX(-25%); }
-`;
-
-const Track = styled.div`
-  display: flex;
-  width: max-content;
-  align-items: center;
-  animation: ${marquee} 42s linear infinite;
-
-  &:hover {
-    animation-play-state: paused;
-  }
-`;
-
-// Equal-width cells + a shared bounding box (cap height, cap width) so every
-// logo — whether a tall badge or a wide wordmark — reads as the same size.
-const LogoLink = styled.a`
-  flex: 0 0 auto;
-  width: clamp(9rem, 13vw, 13rem);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 clamp(0.6rem, 1.4vw, 1.1rem);
-
-  & img {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: clamp(3.25rem, 4.6vw, 4.5rem);
-    object-fit: contain;
-    opacity: 0.7;
-    transition: opacity ${({ theme }) => theme.motion.base};
-  }
-
-  &:hover img {
-    opacity: 1;
-  }
-`;
-
 export function Hero() {
   return (
     <Wrap id="top">
       <Inner>
         <Headline>
-          <span>Quality welding &amp;</span>
-          <span>turn-key manufacturing.</span>
+          <span>Organic content &amp;</span>
+          <span>marketing that works.</span>
         </Headline>
         <Sub>
-          MIG, TIG &amp; laser welding, cutting, bending, machining, and delivery, every
-          process under one roof in Katy, Texas.
+          Short-form video, social management, on-location filming, local SEO, and
+          strategy — everything a local business needs to grow, all from one team.
         </Sub>
 
         <Cards>
           <Cell>
             <PhotoCard>
               {/* eslint-disable-next-line @next/next/no-img-element */}
+              {/* Slightly zoomed out: 94% of the card width, centered, still
+                  anchored to the photo's real bottom edge. The photo remains
+                  taller than the card, so only the top crop shrinks. */}
               <img
-                src="/portfolio/laser.jpg"
-                alt="The Laser Weld Inc. team at the Katy, Texas facility"
+                src="/content.png"
+                alt="Organic short-form content example"
                 loading="eager"
-                style={{ objectPosition: 'center 32%' }}
+                style={{
+                  top: 'auto',
+                  left: '3%',
+                  width: '94%',
+                  height: 'auto',
+                  borderRadius: '20px',
+                }}
               />
             </PhotoCard>
-            <Caption>30+ years in Katy, Texas.</Caption>
+            <Caption>Organic content to get more clients</Caption>
           </Cell>
 
           <Cell>
             <PhotoCard>
-              <Pill>
-                <span className="dot" /> Shop Floor
-              </Pill>
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/hero.webp"
-                alt="Fabrication work on the shop floor in Katy, Texas"
+                src="/brand.png"
+                alt="Aesthetics and personal brand"
                 loading="eager"
-                style={{ objectPosition: 'center 72%', transform: 'scale(1.12)' }}
+                style={{ objectPosition: 'center 35%' }}
               />
             </PhotoCard>
-            <Caption>From local to global, we do it all.</Caption>
+            <Caption>Aesthetics and Personal Brand</Caption>
           </Cell>
         </Cards>
-
-        <Trust>
-          <TrustHead>Trusted by</TrustHead>
-          <Marquee>
-            <Track>
-              {[0, 1, 2, 3].map((copy) =>
-                trustedBy.map((c) => (
-                  <LogoLink
-                    key={`${copy}-${c.name}`}
-                    href={c.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={copy === 0 ? `Visit ${c.name}` : undefined}
-                    aria-hidden={copy !== 0}
-                    tabIndex={copy === 0 ? undefined : -1}
-                    title={c.name}
-                  >
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={c.logo}
-                      alt={copy === 0 ? `${c.name} logo` : ''}
-                      loading="lazy"
-                    />
-                  </LogoLink>
-                ))
-              )}
-            </Track>
-          </Marquee>
-        </Trust>
       </Inner>
     </Wrap>
   );

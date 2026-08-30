@@ -2,11 +2,11 @@
 
 import { useRef, useState } from 'react';
 import styled, { keyframes } from 'styled-components';
-import { Container, Section, H2, Lead } from '../primitives';
+import { Container, Section, H2 } from '../primitives';
 import { Reveal } from '../Reveal';
 import { services, type Service } from '@/data/services';
 
-// One line-drawn icon per capability, keyed by service number. Kept as a
+// One line-drawn icon per service, keyed by service number. Kept as a
 // single coherent set: 24×24, stroke-only, round joins, so they inherit the
 // card's accent colour and read as one family.
 const iconProps = {
@@ -20,72 +20,52 @@ const iconProps = {
 };
 
 const ICONS: Record<string, JSX.Element> = {
-  // 01 — Laser Welding: focused beam meeting a seam, with spatter.
+  // 01 — Short-Form Video: a phone with a play button.
   '01': (
     <svg {...iconProps}>
-      <path d="M12 2v6" />
-      <path d="M9.5 8.5 12 11l2.5-2.5" />
-      <circle cx="12" cy="13.5" r="1.6" />
-      <path d="M4 20h16" />
-      <path d="M7.5 20l1-2M16.5 20l-1-2" />
+      <rect x="7" y="2" width="10" height="20" rx="2.5" />
+      <path d="M10.5 9.5v5l4.5-2.5z" />
     </svg>
   ),
-  // 02 — MIG & TIG Welding: the electric arc.
+  // 02 — Social Media Management: a chat bubble with a heart.
   '02': (
     <svg {...iconProps}>
-      <path d="M13 2 3 14h9l-1 8 10-12h-9z" />
+      <path d="M7.9 20A9 9 0 1 0 4 16.1L2 22z" />
+      <path d="M12 14.5s-2.8-1.7-2.8-3.6a1.6 1.6 0 0 1 2.8-1 1.6 1.6 0 0 1 2.8 1c0 1.9-2.8 3.6-2.8 3.6z" />
     </svg>
   ),
-  // 03 — Laser & Plate Cutting: cutting head over a dashed kerf.
+  // 03 — Content Strategy: a publishing calendar.
   '03': (
     <svg {...iconProps}>
-      <path d="M9 3h6v4l-3 3-3-3z" />
-      <path d="M12 13v3" />
-      <path d="M3 19h3M8.5 19h2M13.5 19h2M18 19h3" />
+      <rect x="3" y="4" width="18" height="17" rx="2" />
+      <path d="M16 2v4M8 2v4M3 9.5h18" />
+      <path d="M8 14h3M8 17.5h6" />
     </svg>
   ),
-  // 04 — CNC Bending: a plate folding up through a radius.
+  // 04 — On-Location Production: a video camera.
   '04': (
     <svg {...iconProps}>
-      <path d="M3 18h9a4 4 0 0 0 4-4V7" />
-      <path d="M13 9l3-3 3 3" />
+      <rect x="2" y="6" width="14" height="12" rx="2" />
+      <path d="m22 8.5-6 3.5 6 3.5z" />
     </svg>
   ),
-  // 05 — 3D Tube Profiling: a tube with a profiled hole.
+  // 05 — YouTube Channel Growth: a player window with a play glyph.
   '05': (
     <svg {...iconProps}>
-      <rect x="3" y="8" width="18" height="8" rx="4" />
-      <path d="M7 9v6" />
-      <circle cx="14" cy="12" r="2.2" />
+      <rect x="2" y="5" width="20" height="14" rx="4" />
+      <path d="m10 9 5.5 3-5.5 3z" />
     </svg>
   ),
-  // 06 — Machining: a machined gear / cog.
+  // 06 — Local SEO & Google Business: a map pin.
   '06': (
     <svg {...iconProps}>
-      <path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" />
-      <circle cx="12" cy="12" r="3" />
-    </svg>
-  ),
-  // 07 — Coating & Laser Cleaning: a protective coating droplet.
-  '07': (
-    <svg {...iconProps}>
-      <path d="M12 3c3.5 4 5.5 6.7 5.5 9.5a5.5 5.5 0 0 1-11 0C6.5 9.7 8.5 7 12 3z" />
-      <path d="M9.5 13a2.5 2.5 0 0 0 2 2.4" />
-    </svg>
-  ),
-  // 08 — Design & Engineering: a drafting compass drawing an arc.
-  '08': (
-    <svg {...iconProps}>
-      <circle cx="12" cy="3.5" r="1.6" />
-      <path d="M12 5.1 7.5 20" />
-      <path d="M12 5.1 16.5 20" />
-      <path d="M6.6 20.5a11 11 0 0 0 10.8 0" />
-      <circle cx="12" cy="9" r="0.6" fill="currentColor" stroke="none" />
+      <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z" />
+      <circle cx="12" cy="10" r="3" />
     </svg>
   ),
 };
 
-// "One facility" band that sits directly under the hero's "Trusted by" strip.
+// "One team" band that sits directly under the hero's "Trusted by" strip.
 // It has no fill of its own — it's transparent, so it shares the hero's red
 // ambient (see GlobalStyles) and reads as one continuous surface with the hero
 // above it, the hero's red flowing straight down through it.
@@ -102,23 +82,8 @@ const Heading = styled(H2)`
   }
 `;
 
-// Supporting tagline that sits directly under the main heading.
-const Subhead = styled.p`
-  margin: 0 0 1.5rem;
-  font-family: ${({ theme }) => theme.fonts.display};
-  font-size: ${({ theme }) => theme.fontSize.xl};
-  font-weight: ${({ theme }) => theme.fontWeight.semibold};
-  letter-spacing: -0.01em;
-  line-height: 1.15;
-  color: ${({ theme }) => theme.colors.textMuted};
-  & em {
-    font-style: normal;
-    color: ${({ theme }) => theme.colors.accent};
-  }
-`;
-
 // ---------------------------------------------------------------------------
-//  Capability selector.
+//  Service selector.
 //  Desktop: a vertical list of options on the left, one large display card on
 //  the right showing the active capability (image frame + copy).
 //  Mobile: the same list becomes an accordion — tapping a row expands it in
@@ -380,7 +345,7 @@ const Detail = styled.div`
   }
 `;
 
-// Bordered placeholder that stands in for the (future) capability photo. When
+// Bordered placeholder that stands in for the (future) service photo. When
 // a `Service.image` is provided it renders that instead of the placeholder.
 const ImgFrame = styled.div`
   position: relative;
@@ -430,6 +395,61 @@ const ImgFrame = styled.div`
   }
 `;
 
+// Live Instagram embeds shown when a service provides `examples` — two reels
+// side by side under a small mono label, in place of the placeholder frame.
+// Stacked on narrow screens so each embed keeps a usable width.
+const ExamplesFrame = styled.div`
+  & .cap {
+    display: block;
+    margin-bottom: 0.6rem;
+    font-family: ${({ theme }) => theme.fonts.mono};
+    font-size: ${({ theme }) => theme.fontSize.xs};
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: ${({ theme }) => theme.colors.textDim};
+  }
+  container-type: inline-size;
+
+  & .grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 0.75rem;
+  }
+  & .reel {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    aspect-ratio: 9 / 19;
+    border: 1px solid ${({ theme }) => theme.colors.borderStrong};
+    border-radius: ${({ theme }) => theme.radius.md};
+    overflow: hidden;
+    background: ${({ theme }) => theme.colors.bg};
+  }
+  /* Instagram's embed collapses into a tiny floating card below 326px, so the
+     iframe never renders narrower than that — in a tighter cell it stays at
+     326px, centered, and the cell crops the embed's outer margins instead. */
+  & .reel iframe {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    min-width: 326px;
+    height: 100%;
+    border: 0;
+  }
+
+  /* Side-by-side only when the card itself is wide enough for two full-width
+     embeds (container query, so the accordion and desktop card both behave). */
+  @container (min-width: 688px) {
+    & .grid {
+      grid-template-columns: repeat(2, minmax(0, 360px));
+      justify-content: center;
+    }
+  }
+`;
+
 const ChevronIcon = () => (
   <svg
     className="chev"
@@ -447,20 +467,39 @@ const ChevronIcon = () => (
   </svg>
 );
 
-// The image frame + copy shown for a given capability, reused on both layouts.
+// The image frame + copy shown for a given service, reused on both layouts.
 function CapabilityDetail({ s }: { s: Service }) {
   return (
     <Detail>
-      <ImgFrame>
-        {s.image ? (
-          <img src={s.image} alt={s.title} loading="lazy" />
-        ) : (
-          <>
-            <span className="ph">{ICONS[s.num]}</span>
-            <span className="cap">Image coming soon</span>
-          </>
-        )}
-      </ImgFrame>
+      {s.examples ? (
+        <ExamplesFrame>
+          <span className="cap">{s.examples.label}</span>
+          <div className="grid">
+            {s.examples.urls.map((url) => (
+              <div className="reel" key={url}>
+                <iframe
+                  src={`${url.replace(/\/+$/, '')}/embed/`}
+                  title={`${s.title} example on Instagram`}
+                  loading="lazy"
+                  allowFullScreen
+                  scrolling="no"
+                />
+              </div>
+            ))}
+          </div>
+        </ExamplesFrame>
+      ) : (
+        <ImgFrame>
+          {s.image ? (
+            <img src={s.image} alt={s.title} loading="lazy" />
+          ) : (
+            <>
+              <span className="ph">{ICONS[s.num]}</span>
+              <span className="cap">Image coming soon</span>
+            </>
+          )}
+        </ImgFrame>
+      )}
       <div className="frameMeta">
         <span className="num">{s.num}</span>
         <span className="line" />
@@ -496,22 +535,10 @@ export function Services() {
       <Inner>
         <Reveal delay={80}>
           <Heading>
-            One facility. <em>Every process</em> under one roof.
+            We handle all of the <em>content</em> and <em>marketing</em> for you
           </Heading>
         </Reveal>
         <Reveal delay={110}>
-          <Subhead>
-            Trusted where <em>failure isn&apos;t an option</em>.
-          </Subhead>
-        </Reveal>
-        <Reveal delay={140}>
-          <Lead>
-            Cut, bent, welded, machined, coated, and shipped, all in-house. No outside
-            handoffs, no lost tolerances, no finger-pointing. From big to small, we do it all.
-          </Lead>
-        </Reveal>
-
-        <Reveal delay={180}>
           <Layout>
             <Rail role="tablist" aria-label="Capabilities">
               {services.map((s, i) => {

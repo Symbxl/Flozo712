@@ -27,8 +27,8 @@ export interface LegalDocData {
 
 export const privacyPolicy: LegalDocData = {
   "title": "Privacy Policy",
-  "lastUpdated": "July 8, 2026",
-  "intro": "Laser Weld Inc. (\"Laser Weld Inc.,\" \"we,\" \"us,\" or \"our\") is a small metal fabrication and manufacturing company. This Privacy Policy explains how we collect, use, disclose, and protect personal information when you visit our website at https://laserweldinc.com (the \"Site\") or otherwise interact with us. For the purposes of the EU and UK General Data Protection Regulation, Laser Weld Inc. is the \"controller\" of the personal information described in this policy. We have written this policy in plain English so you can understand our practices.\n\nBy using our Site, you acknowledge that you have read and understood this Privacy Policy. If you do not agree with our practices, please do not use the Site. If you have any questions or wish to exercise your privacy rights, you can reach us at sales@laserweldinc.com.",
+  "lastUpdated": "August 29, 2026",
+  "intro": "Flozo Media (\"Flozo Media,\" \"we,\" \"us,\" or \"our\") is a small marketing company focused on organic content for local businesses. This Privacy Policy explains how we collect, use, disclose, and protect personal information when you visit our website at https://flozomedia.com (the \"Site\") or otherwise interact with us. For the purposes of the EU and UK General Data Protection Regulation, Flozo Media is the \"controller\" of the personal information described in this policy. We have written this policy in plain English so you can understand our practices.\n\nBy using our Site, you acknowledge that you have read and understood this Privacy Policy. If you do not agree with our practices, please do not use the Site. If you have any questions or wish to exercise your privacy rights, you can reach us at hello@flozomedia.com.",
   "sections": [
     {
       "heading": "Information We Collect",
@@ -100,7 +100,7 @@ export const privacyPolicy: LegalDocData = {
         },
         {
           "type": "paragraph",
-          "text": "As a manufacturing company established in the United States, we do not maintain an establishment in the EEA or the United Kingdom and have not appointed an Article 27 representative in the EU or the UK. If you have questions about our legal bases or wish to exercise your rights, contact us at sales@laserweldinc.com."
+          "text": "As a marketing company established in the United States, we do not maintain an establishment in the EEA or the United Kingdom and have not appointed an Article 27 representative in the EU or the UK. If you have questions about our legal bases or wish to exercise your rights, contact us at hello@flozomedia.com."
         }
       ]
     },
@@ -154,7 +154,7 @@ export const privacyPolicy: LegalDocData = {
           "items": [
             "Service providers and processors. We may disclose information to trusted third parties that perform services on our behalf, such as website hosting, email delivery, form processing, and privacy-friendly analytics. These providers act on our instructions under contract and are permitted to use the information only as needed to provide their services to us.",
             "Embedded content providers. As described above, embedded media from YouTube, Instagram, and TikTok may receive information directly from your browser when you load or interact with that content.",
-            "Legal and safety recipients. We may disclose information where we believe in good faith that doing so is necessary to comply with applicable law, regulation, legal process, or an enforceable governmental request, or to protect the rights, property, or safety of Laser Weld Inc., our users, or others.",
+            "Legal and safety recipients. We may disclose information where we believe in good faith that doing so is necessary to comply with applicable law, regulation, legal process, or an enforceable governmental request, or to protect the rights, property, or safety of Flozo Media, our users, or others.",
             "Successors in a business transfer. If we are involved in a merger, acquisition, financing, reorganization, sale of assets, or similar transaction, or in bankruptcy or insolvency, personal information may be transferred as part of that transaction, subject to the commitments made in this Privacy Policy."
           ]
         },
@@ -189,7 +189,7 @@ export const privacyPolicy: LegalDocData = {
       "blocks": [
         {
           "type": "paragraph",
-          "text": "We take reasonable technical and organizational measures designed to protect personal information against loss, misuse, unauthorized access, disclosure, alteration, and destruction. As a manufacturing company, these measures include using reputable service providers, limiting access to personal information to those who need it, and relying on encrypted (HTTPS) connections for our Site. However, no method of transmission over the internet or method of electronic storage is completely secure, and we cannot guarantee absolute security. We encourage you to take steps to protect your own information, including when communicating with us, and not to send us sensitive information by email."
+          "text": "We take reasonable technical and organizational measures designed to protect personal information against loss, misuse, unauthorized access, disclosure, alteration, and destruction. As a small company, these measures include using reputable service providers, limiting access to personal information to those who need it, and relying on encrypted (HTTPS) connections for our Site. However, no method of transmission over the internet or method of electronic storage is completely secure, and we cannot guarantee absolute security. We encourage you to take steps to protect your own information, including when communicating with us, and not to send us sensitive information by email."
         }
       ]
     },
@@ -198,7 +198,7 @@ export const privacyPolicy: LegalDocData = {
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Our Site is not directed to children, and we do not knowingly collect personal information from children under the age of 13 (or under 16 where a higher age applies under local law, including the EEA and the United Kingdom). We do not knowingly sell or share the personal information of consumers under 16 years of age. If you are a parent or guardian and believe that your child has provided us with personal information, please contact us at sales@laserweldinc.com, and we will take steps to delete that information."
+          "text": "Our Site is not directed to children, and we do not knowingly collect personal information from children under the age of 13 (or under 16 where a higher age applies under local law, including the EEA and the United Kingdom). We do not knowingly sell or share the personal information of consumers under 16 years of age. If you are a parent or guardian and believe that your child has provided us with personal information, please contact us at hello@flozomedia.com, and we will take steps to delete that information."
         }
       ]
     },
@@ -207,7 +207,7 @@ export const privacyPolicy: LegalDocData = {
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Depending on where you live, you may have certain rights regarding your personal information. The sections below describe rights available to California residents and to individuals in the EEA, the United Kingdom, and Switzerland. To exercise any of these rights, contact us at sales@laserweldinc.com. We will respond as required by applicable law, we will not discriminate against you for exercising your rights, and we will not charge you a fee unless your request is manifestly unfounded, excessive, or repetitive, as permitted by law. We may need to verify your identity before fulfilling certain requests, and we will only use information provided in a request to verify the requester's identity and to respond to the request."
+          "text": "Depending on where you live, you may have certain rights regarding your personal information. The sections below describe rights available to California residents and to individuals in the EEA, the United Kingdom, and Switzerland. To exercise any of these rights, contact us at hello@flozomedia.com. We will respond as required by applicable law, we will not discriminate against you for exercising your rights, and we will not charge you a fee unless your request is manifestly unfounded, excessive, or repetitive, as permitted by law. We may need to verify your identity before fulfilling certain requests, and we will only use information provided in a request to verify the requester's identity and to respond to the request."
         }
       ]
     },
@@ -231,7 +231,7 @@ export const privacyPolicy: LegalDocData = {
         },
         {
           "type": "paragraph",
-          "text": "How to submit a request. To exercise these rights, email us at sales@laserweldinc.com. We will acknowledge your request and respond within the timeframes required by the CCPA (generally within 45 days, with one possible 45-day extension). You may use an authorized agent to submit a request on your behalf; we may require the agent to provide proof of authorization and may still verify your identity directly. To verify your request, we may ask you to confirm information we already hold, such as the email address you used to contact us. If we deny your request, we will explain why."
+          "text": "How to submit a request. To exercise these rights, email us at hello@flozomedia.com. We will acknowledge your request and respond within the timeframes required by the CCPA (generally within 45 days, with one possible 45-day extension). You may use an authorized agent to submit a request on your behalf; we may require the agent to provide proof of authorization and may still verify your identity directly. To verify your request, we may ask you to confirm information we already hold, such as the email address you used to contact us. If we deny your request, we will explain why."
         },
         {
           "type": "paragraph",
@@ -261,7 +261,7 @@ export const privacyPolicy: LegalDocData = {
         },
         {
           "type": "paragraph",
-          "text": "To exercise any of these rights, contact us at sales@laserweldinc.com. We will respond within the timeframes required by applicable law (generally within one month, which may be extended for complex or numerous requests)."
+          "text": "To exercise any of these rights, contact us at hello@flozomedia.com. We will respond within the timeframes required by applicable law (generally within one month, which may be extended for complex or numerous requests)."
         }
       ]
     },
@@ -279,7 +279,7 @@ export const privacyPolicy: LegalDocData = {
       "blocks": [
         {
           "type": "paragraph",
-          "text": "We are based in the United States, and the information we collect is processed and stored in the United States and potentially in other countries where our service providers operate. These countries may have data protection laws that differ from those in your country of residence. If you access our Site from outside the United States, you understand that your information may be transferred to, stored in, and processed in the United States. Where required by law, we take appropriate safeguards to protect personal information transferred out of the EEA, the United Kingdom, or Switzerland, such as relying on lawful transfer mechanisms (for example, the European Commission's Standard Contractual Clauses and the UK International Data Transfer Addendum). You may request a copy of the relevant safeguards by contacting us at sales@laserweldinc.com."
+          "text": "We are based in the United States, and the information we collect is processed and stored in the United States and potentially in other countries where our service providers operate. These countries may have data protection laws that differ from those in your country of residence. If you access our Site from outside the United States, you understand that your information may be transferred to, stored in, and processed in the United States. Where required by law, we take appropriate safeguards to protect personal information transferred out of the EEA, the United Kingdom, or Switzerland, such as relying on lawful transfer mechanisms (for example, the European Commission's Standard Contractual Clauses and the UK International Data Transfer Addendum). You may request a copy of the relevant safeguards by contacting us at hello@flozomedia.com."
         }
       ]
     },
@@ -306,7 +306,7 @@ export const privacyPolicy: LegalDocData = {
       "blocks": [
         {
           "type": "paragraph",
-          "text": "This Privacy Policy and any disputes arising out of or relating to it are governed by the laws of the State of Texas, United States, without regard to its conflict-of-laws principles, except where superseded by applicable data protection laws that grant you additional rights. Nothing in this section deprives you of the protection of mandatory provisions of the law of your country of residence."
+          "text": "This Privacy Policy and any disputes arising out of or relating to it are governed by the laws of the State of Washington, United States, without regard to its conflict-of-laws principles, except where superseded by applicable data protection laws that grant you additional rights. Nothing in this section deprives you of the protection of mandatory provisions of the law of your country of residence."
         }
       ]
     },
@@ -320,10 +320,10 @@ export const privacyPolicy: LegalDocData = {
         {
           "type": "bullets",
           "items": [
-            "Laser Weld Inc.",
-            "Email: sales@laserweldinc.com",
-            "Website: https://laserweldinc.com",
-            "Location: State of Texas, United States"
+            "Flozo Media",
+            "Email: hello@flozomedia.com",
+            "Website: https://flozomedia.com",
+            "Location: Redmond, Washington, United States"
           ]
         }
       ]
@@ -333,15 +333,15 @@ export const privacyPolicy: LegalDocData = {
 
 export const termsOfService: LegalDocData = {
   "title": "Terms of Service",
-  "lastUpdated": "July 8, 2026",
-  "intro": "Welcome to Laser Weld Inc.. These Terms of Service (\"Terms\") govern your access to and use of the website located at https://laserweldinc.com (the \"Site\"), which is operated by Laser Weld Inc., a metal fabrication and manufacturing company based in the State of Texas, United States (\"Laser Weld Inc.,\" \"we,\" \"us,\" or \"our\"). The Site serves as a portfolio of our work and a way for prospective clients and other visitors to learn about us and get in touch.\n\nPlease read these Terms carefully before using the Site. By accessing or using the Site, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use the Site.\n\nThese Terms work together with our Privacy Policy, available at https://laserweldinc.com/privacy, which explains how we collect, use, and protect personal information and describes the privacy rights available to you. By using the Site, you also acknowledge our Privacy Policy.",
+  "lastUpdated": "August 29, 2026",
+  "intro": "Welcome to Flozo Media. These Terms of Service (\"Terms\") govern your access to and use of the website located at https://flozomedia.com (the \"Site\"), which is operated by Flozo Media, a marketing company based in Redmond, Washington, United States (\"Flozo Media,\" \"we,\" \"us,\" or \"our\"). The Site serves as a portfolio of our work and a way for prospective clients and other visitors to learn about us and get in touch.\n\nPlease read these Terms carefully before using the Site. By accessing or using the Site, you agree to be bound by these Terms. If you do not agree to these Terms, please do not use the Site.\n\nThese Terms work together with our Privacy Policy, available at https://flozomedia.com/privacy, which explains how we collect, use, and protect personal information and describes the privacy rights available to you. By using the Site, you also acknowledge our Privacy Policy.",
   "sections": [
     {
       "heading": "1. Acceptance of Terms",
       "blocks": [
         {
           "type": "paragraph",
-          "text": "By accessing, browsing, or otherwise using the Site, you acknowledge that you have read, understood, and agree to be bound by these Terms and by our Privacy Policy at https://laserweldinc.com/privacy. These Terms form a binding agreement between you and Laser Weld Inc.. If you are using the Site on behalf of a company or other organization, you represent that you have the authority to bind that entity to these Terms, and \"you\" refers to both you and that entity."
+          "text": "By accessing, browsing, or otherwise using the Site, you acknowledge that you have read, understood, and agree to be bound by these Terms and by our Privacy Policy at https://flozomedia.com/privacy. These Terms form a binding agreement between you and Flozo Media. If you are using the Site on behalf of a company or other organization, you represent that you have the authority to bind that entity to these Terms, and \"you\" refers to both you and that entity."
         },
         {
           "type": "paragraph",
@@ -358,7 +358,7 @@ export const termsOfService: LegalDocData = {
         },
         {
           "type": "paragraph",
-          "text": "We do not knowingly collect personal information from children under the age of 16 (or under the applicable minimum age in your jurisdiction). We do not sell or share the personal information of minors. If you believe that a child has provided us with personal information through the Site, please contact us at sales@laserweldinc.com and we will promptly delete it."
+          "text": "We do not knowingly collect personal information from children under the age of 16 (or under the applicable minimum age in your jurisdiction). We do not sell or share the personal information of minors. If you believe that a child has provided us with personal information through the Site, please contact us at hello@flozomedia.com and we will promptly delete it."
         }
       ]
     },
@@ -367,11 +367,11 @@ export const termsOfService: LegalDocData = {
       "blocks": [
         {
           "type": "paragraph",
-          "text": "The Site is an informational and marketing website. It exists to showcase Laser Weld Inc.'s portfolio of custom metal fabrication and manufacturing work, to describe the capabilities and services we offer, and to allow interested parties to contact us and submit inquiries."
+          "text": "The Site is an informational and marketing website. It exists to showcase Flozo Media's marketing and content work, to describe the services we offer, and to allow interested parties to contact us and submit inquiries."
         },
         {
           "type": "paragraph",
-          "text": "The Site itself does not provide fabrication or manufacturing services, and nothing on the Site constitutes an offer, quote, or commitment to perform any work. Any actual fabrication, manufacturing, or other engagement between you and Laser Weld Inc. is a separate matter and will be governed by a separate written agreement (such as a proposal, statement of work, or services contract) signed by both parties. In the event of any conflict between these Terms and the terms of such a separate written agreement regarding a specific engagement, the separate written agreement will control with respect to that engagement."
+          "text": "The Site itself does not provide marketing services, and nothing on the Site constitutes an offer, quote, or commitment to perform any work. Any actual marketing engagement between you and Flozo Media is a separate matter and will be governed by a separate written agreement (such as a proposal, statement of work, or services contract) signed by both parties. In the event of any conflict between these Terms and the terms of such a separate written agreement regarding a specific engagement, the separate written agreement will control with respect to that engagement."
         },
         {
           "type": "paragraph",
@@ -384,7 +384,7 @@ export const termsOfService: LegalDocData = {
       "blocks": [
         {
           "type": "paragraph",
-          "text": "Unless otherwise indicated, all content on the Site is the property of Laser Weld Inc. or its licensors and is protected by United States and international copyright, trademark, and other intellectual property laws. This content includes, but is not limited to:"
+          "text": "Unless otherwise indicated, all content on the Site is the property of Flozo Media or its licensors and is protected by United States and international copyright, trademark, and other intellectual property laws. This content includes, but is not limited to:"
         },
         {
           "type": "bullets",
@@ -392,17 +392,17 @@ export const termsOfService: LegalDocData = {
             "All photographs, renderings, images, and other visual media displayed on the Site;",
             "All text, written descriptions, copy, and editorial content;",
             "The design, layout, look and feel, and arrangement of the Site;",
-            "The \"Laser Weld Inc.\" name, logo, brand, and any related marks, slogans, and visual identity; and",
+            "The \"Flozo Media\" name, logo, brand, and any related marks, slogans, and visual identity; and",
             "Any other graphics, audio, software, and materials made available through the Site."
           ]
         },
         {
           "type": "paragraph",
-          "text": "We grant you a limited, personal, non-exclusive, non-transferable, revocable license to access and view the Site and its content for your own personal, non-commercial purposes of evaluating Laser Weld Inc. and our work. This license does not give you any ownership of the content."
+          "text": "We grant you a limited, personal, non-exclusive, non-transferable, revocable license to access and view the Site and its content for your own personal, non-commercial purposes of evaluating Flozo Media and our work. This license does not give you any ownership of the content."
         },
         {
           "type": "paragraph",
-          "text": "Except as expressly permitted by this license or by applicable law, you may not copy, reproduce, download, republish, distribute, display, perform, modify, adapt, create derivative works from, frame, scrape, sell, or otherwise exploit any of the Site's content, in whole or in part, without our prior written permission. Our photographs, brand assets, and other Site materials are the result of our work, and reusing them without permission is prohibited. If you would like to use any of our content, please contact us at sales@laserweldinc.com to request permission."
+          "text": "Except as expressly permitted by this license or by applicable law, you may not copy, reproduce, download, republish, distribute, display, perform, modify, adapt, create derivative works from, frame, scrape, sell, or otherwise exploit any of the Site's content, in whole or in part, without our prior written permission. Our photographs, brand assets, and other Site materials are the result of our work, and reusing them without permission is prohibited. If you would like to use any of our content, please contact us at hello@flozomedia.com to request permission."
         }
       ]
     },
@@ -419,11 +419,11 @@ export const termsOfService: LegalDocData = {
         },
         {
           "type": "paragraph",
-          "text": "By making a Submission, you grant Laser Weld Inc. a limited, non-exclusive, royalty-free license to use, store, copy, and process the contents of your Submission for the purpose of receiving, reviewing, and responding to your inquiry, communicating with you, and providing or discussing potential services. Where applicable law (such as the EU and UK GDPR) requires a legal basis for processing, we rely on your consent in submitting the inquiry and on our legitimate interest in responding to it and operating our company. We use the personal information in your Submission only for these purposes."
+          "text": "By making a Submission, you grant Flozo Media a limited, non-exclusive, royalty-free license to use, store, copy, and process the contents of your Submission for the purpose of receiving, reviewing, and responding to your inquiry, communicating with you, and providing or discussing potential services. Where applicable law (such as the EU and UK GDPR) requires a legal basis for processing, we rely on your consent in submitting the inquiry and on our legitimate interest in responding to it and operating our company. We use the personal information in your Submission only for these purposes."
         },
         {
           "type": "paragraph",
-          "text": "We do not sell or share your personal information, and we do not use it for cross-context behavioral advertising. We retain inquiry information only for as long as needed to respond to and follow up on your inquiry, to maintain ordinary business records, and to comply with our legal obligations, after which we delete or anonymize it. For full details on how we handle personal information, the legal bases we rely on, how long we keep data, and the privacy rights available to you, please review our Privacy Policy at https://laserweldinc.com/privacy."
+          "text": "We do not sell or share your personal information, and we do not use it for cross-context behavioral advertising. We retain inquiry information only for as long as needed to respond to and follow up on your inquiry, to maintain ordinary business records, and to comply with our legal obligations, after which we delete or anonymize it. For full details on how we handle personal information, the legal bases we rely on, how long we keep data, and the privacy rights available to you, please review our Privacy Policy at https://flozomedia.com/privacy."
         },
         {
           "type": "paragraph",
@@ -447,7 +447,7 @@ export const termsOfService: LegalDocData = {
             "Attempt to gain unauthorized access to, interfere with, damage, or disrupt the Site, the servers or networks on which it is hosted, or any security or authentication measures;",
             "Introduce any viruses, malware, or other malicious or technologically harmful material;",
             "Use the Site to transmit unsolicited or unauthorized advertising, spam, or other commercial solicitations;",
-            "Impersonate or attempt to impersonate Laser Weld Inc., our staff, or any other person or entity, or misrepresent your affiliation with any person or entity; or",
+            "Impersonate or attempt to impersonate Flozo Media, our staff, or any other person or entity, or misrepresent your affiliation with any person or entity; or",
             "Use the Site in any manner that could disable, overburden, damage, or impair it, or interfere with any other party's use of the Site."
           ]
         }
@@ -462,7 +462,7 @@ export const termsOfService: LegalDocData = {
         },
         {
           "type": "paragraph",
-          "text": "When you interact with embedded third-party media or follow a link to a third-party site, those third parties may set their own cookies and collect information about you in accordance with their own terms and privacy policies. We do not control these third-party platforms and are not responsible for their content, practices, cookies, or how they handle your information. The inclusion of any link or embedded content does not imply our endorsement of the third party. We encourage you to review the terms and privacy policies of any third-party platform you interact with. More information about embedded content and cookies is available in our Privacy Policy at https://laserweldinc.com/privacy."
+          "text": "When you interact with embedded third-party media or follow a link to a third-party site, those third parties may set their own cookies and collect information about you in accordance with their own terms and privacy policies. We do not control these third-party platforms and are not responsible for their content, practices, cookies, or how they handle your information. The inclusion of any link or embedded content does not imply our endorsement of the third party. We encourage you to review the terms and privacy policies of any third-party platform you interact with. More information about embedded content and cookies is available in our Privacy Policy at https://flozomedia.com/privacy."
         }
       ]
     },
@@ -479,7 +479,7 @@ export const termsOfService: LegalDocData = {
         },
         {
           "type": "paragraph",
-          "text": "We do not sell or share personal information for cross-context behavioral advertising, we do not operate advertising networks, and we do not use cookies to build advertising profiles. For a full description of the cookies and similar technologies we use and your choices, please see our Privacy Policy at https://laserweldinc.com/privacy."
+          "text": "We do not sell or share personal information for cross-context behavioral advertising, we do not operate advertising networks, and we do not use cookies to build advertising profiles. For a full description of the cookies and similar technologies we use and your choices, please see our Privacy Policy at https://flozomedia.com/privacy."
         }
       ]
     },
@@ -496,7 +496,7 @@ export const termsOfService: LegalDocData = {
         },
         {
           "type": "paragraph",
-          "text": "To exercise any of these rights, or to ask questions about how we handle your information, please contact us at sales@laserweldinc.com or review our Privacy Policy at https://laserweldinc.com/privacy, which explains these rights and how to exercise them in more detail. We will not discriminate against you for exercising any of your privacy rights."
+          "text": "To exercise any of these rights, or to ask questions about how we handle your information, please contact us at hello@flozomedia.com or review our Privacy Policy at https://flozomedia.com/privacy, which explains these rights and how to exercise them in more detail. We will not discriminate against you for exercising any of your privacy rights."
         }
       ]
     },
@@ -535,7 +535,7 @@ export const termsOfService: LegalDocData = {
       "blocks": [
         {
           "type": "paragraph",
-          "text": "To the fullest extent permitted by applicable law, you agree to indemnify, defend, and hold harmless Laser Weld Inc. and its owners, employees, contractors, and agents from and against any and all third-party claims, liabilities, damages, losses, costs, and expenses (including reasonable attorneys' fees) arising out of or relating to your misuse of the Site, your Submissions, your violation of these Terms, or your violation of any rights of any third party, including any intellectual property or privacy rights. This obligation does not apply to the extent a claim arises from our own negligence or willful misconduct, and it does not limit any non-waivable rights you may have under applicable consumer protection law."
+          "text": "To the fullest extent permitted by applicable law, you agree to indemnify, defend, and hold harmless Flozo Media and its owners, employees, contractors, and agents from and against any and all third-party claims, liabilities, damages, losses, costs, and expenses (including reasonable attorneys' fees) arising out of or relating to your misuse of the Site, your Submissions, your violation of these Terms, or your violation of any rights of any third party, including any intellectual property or privacy rights. This obligation does not apply to the extent a claim arises from our own negligence or willful misconduct, and it does not limit any non-waivable rights you may have under applicable consumer protection law."
         }
       ]
     },
@@ -544,7 +544,7 @@ export const termsOfService: LegalDocData = {
       "blocks": [
         {
           "type": "paragraph",
-          "text": "These Terms and any dispute arising out of or relating to them or to the Site are governed by and construed in accordance with the laws of the State of Texas, United States, without regard to its conflict-of-laws principles. You agree that any legal action or proceeding arising out of or relating to these Terms or the Site will be brought exclusively in the state or federal courts located in the State of Texas, and you consent to the personal jurisdiction of and venue in those courts."
+          "text": "These Terms and any dispute arising out of or relating to them or to the Site are governed by and construed in accordance with the laws of the State of Washington, United States, without regard to its conflict-of-laws principles. You agree that any legal action or proceeding arising out of or relating to these Terms or the Site will be brought exclusively in the state or federal courts located in the State of Washington, and you consent to the personal jurisdiction of and venue in those courts."
         },
         {
           "type": "paragraph",
@@ -557,7 +557,7 @@ export const termsOfService: LegalDocData = {
       "blocks": [
         {
           "type": "paragraph",
-          "text": "If you have a concern or dispute relating to these Terms or the Site, we ask that you first contact us at sales@laserweldinc.com so that we can try to resolve the matter informally. We will make a good-faith effort to address your concern. Nothing in this section limits your right to pursue any remedy available to you under applicable law, including the right of consumers to bring a claim before a competent court or, where available, an alternative dispute resolution body."
+          "text": "If you have a concern or dispute relating to these Terms or the Site, we ask that you first contact us at hello@flozomedia.com so that we can try to resolve the matter informally. We will make a good-faith effort to address your concern. Nothing in this section limits your right to pursue any remedy available to you under applicable law, including the right of consumers to bring a claim before a competent court or, where available, an alternative dispute resolution body."
         }
       ]
     },
@@ -593,7 +593,7 @@ export const termsOfService: LegalDocData = {
       "blocks": [
         {
           "type": "paragraph",
-          "text": "These Terms, together with our Privacy Policy at https://laserweldinc.com/privacy, any separate written agreements governing specific engagements, and any other policies we post on the Site, constitute the entire agreement between you and Laser Weld Inc. regarding your use of the Site, and supersede all prior or contemporaneous understandings and agreements relating to that subject matter. Our failure to enforce any provision of these Terms will not be deemed a waiver of that provision or of any other provision."
+          "text": "These Terms, together with our Privacy Policy at https://flozomedia.com/privacy, any separate written agreements governing specific engagements, and any other policies we post on the Site, constitute the entire agreement between you and Flozo Media regarding your use of the Site, and supersede all prior or contemporaneous understandings and agreements relating to that subject matter. Our failure to enforce any provision of these Terms will not be deemed a waiver of that provision or of any other provision."
         }
       ]
     },
@@ -607,16 +607,16 @@ export const termsOfService: LegalDocData = {
         {
           "type": "bullets",
           "items": [
-            "Laser Weld Inc.",
-            "Email: sales@laserweldinc.com",
-            "Website: https://laserweldinc.com",
-            "Privacy Policy: https://laserweldinc.com/privacy",
-            "Location: State of Texas, United States"
+            "Flozo Media",
+            "Email: hello@flozomedia.com",
+            "Website: https://flozomedia.com",
+            "Privacy Policy: https://flozomedia.com/privacy",
+            "Location: Redmond, Washington, United States"
           ]
         },
         {
           "type": "paragraph",
-          "text": "Last Updated: July 8, 2026"
+          "text": "Last Updated: August 29, 2026"
         }
       ]
     }

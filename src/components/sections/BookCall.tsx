@@ -660,11 +660,11 @@ export function BookCall() {
           <Head>
             <SectionLabel>Book a Call</SectionLabel>
             <Heading>
-              Let&apos;s talk through <em>your next part</em>.
+              Let&apos;s talk about <em>growing your business</em>.
             </Heading>
             <Lead>
-              Grab a time with our team. Tell us about the job and we&apos;ll confirm
-              you&apos;re a fit and line up a fast, honest quote.
+              Grab a time with our team. Tell us about your business and we&apos;ll map
+              out a content plan that turns attention into customers.
             </Lead>
           </Head>
         </Reveal>
@@ -707,10 +707,10 @@ export function BookCall() {
                 </Success>
               ) : (
                 <>
-                  <CardTitle>Laser Weld Consultation Call</CardTitle>
+                  <CardTitle>Flozo Media Strategy Call</CardTitle>
                   <CardText>
-                    Excited to speak with you about your next{' '}
-                    <u>fabrication</u> project.
+                    Excited to speak with you about growing your business with{' '}
+                    <u>organic content</u>.
                   </CardText>
                   <CardText>Book a call below to see if we&apos;re a fit.</CardText>
 

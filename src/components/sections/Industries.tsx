@@ -6,11 +6,11 @@ import { Reveal } from '../Reveal';
 import { industries } from '@/data/services';
 
 // =====================================================================
-//  Industries We Serve — a clean, editorial index of the sectors Laser
-//  Weld builds for. No cards: each sector is a full-width row on a
-//  hairline-divided ledger — a mono index, a line icon, the name, and a
-//  concrete descriptor. Hover slides in a signal-red rule and reddens the
-//  name. Reads like a precision spec sheet, not a grid of boxes.
+//  Industries We Serve — a clean, editorial index of the home-service
+//  trades Flozo Media creates for. No cards: each trade is a full-width
+//  row on a hairline-divided ledger — a mono index, a line icon, the
+//  name, and a concrete descriptor. Hover slides in a signal-red rule
+//  and reddens the name.
 // =====================================================================
 
 // One line-drawn icon per sector, keyed by name. Same family as the
@@ -27,53 +27,49 @@ const iconProps = {
 };
 
 const ICONS: Record<string, JSX.Element> = {
-  // Oil & Gas — a pressure gauge / dial (high-pressure conditions).
-  'Oil & Gas': (
+  // HVAC — a snowflake (heating & cooling).
+  HVAC: (
     <svg {...iconProps}>
-      <circle cx="12" cy="12" r="8.5" />
-      <path d="M12 12l3.6-2.8" />
-      <path d="M12 3.5V5M20.5 12H19M12 20.5V19M3.5 12H5" />
-      <circle cx="12" cy="12" r="1.1" fill="currentColor" stroke="none" />
+      <path d="M12 3v18M4.2 7.5l15.6 9M19.8 7.5l-15.6 9" />
+      <path d="M9.9 4.7L12 6.8l2.1-2.1M9.9 19.3L12 17.2l2.1 2.1" />
     </svg>
   ),
-  // Aerospace — a jet silhouette (flight-critical tolerances).
-  Aerospace: (
+  // Plumbing — a water droplet.
+  Plumbing: (
     <svg {...iconProps}>
-      <path d="M12 2c1.1 1.6 1.7 3.8 1.7 6.4v1.8l6.3 3.8v2l-6.3-1.9v3.5l2.2 1.6V22L12 20.9 8.1 22v-1.8l2.2-1.6v-3.5L4 17v-2l6.3-3.8V8.4C10.3 5.8 10.9 3.6 12 2z" />
+      <path d="M12 3c3.7 4.4 6.2 7.7 6.2 10.8a6.2 6.2 0 1 1-12.4 0C5.8 10.7 8.3 7.4 12 3z" />
+      <path d="M9.3 14.2a2.8 2.8 0 0 0 2.3 3.1" />
     </svg>
   ),
-  // Wastewater — stacked water waves (treatment / flow).
-  Wastewater: (
+  // Electrical — a lightning bolt.
+  Electrical: (
     <svg {...iconProps}>
-      <path d="M3 7c2.2 0 2.2-1.7 4.5-1.7S9.8 7 12 7s2.2-1.7 4.5-1.7S18.8 7 21 7" />
-      <path d="M3 12.5c2.2 0 2.2-1.7 4.5-1.7S9.8 12.5 12 12.5s2.2-1.7 4.5-1.7S18.8 12.5 21 12.5" />
-      <path d="M3 18c2.2 0 2.2-1.7 4.5-1.7S9.8 18 12 18s2.2-1.7 4.5-1.7S18.8 18 21 18" />
+      <path d="M13 2L4.5 13h5L8 22l8.5-11h-5L13 2z" />
     </svg>
   ),
-  // Data Centers — stacked server units with status lights (uptime).
-  'Data Centers': (
+  // Roofing & Exteriors — a house with the roofline leading.
+  'Roofing & Exteriors': (
     <svg {...iconProps}>
-      <rect x="3.5" y="4" width="17" height="6.5" rx="1.5" />
-      <rect x="3.5" y="13.5" width="17" height="6.5" rx="1.5" />
-      <path d="M7 7.25h.01M7 16.75h.01" />
-      <path d="M10 7.25h7M10 16.75h7" />
+      <path d="M2.5 11.5L12 3.5l9.5 8" />
+      <path d="M5.5 9.3V20h13V9.3" />
+      <path d="M10 20v-4.5h4V20" />
     </svg>
   ),
-  // Material Handling — a box riding a conveyor of rollers.
-  'Material Handling': (
+  // Landscaping & Lawn Care — a sprout over ground.
+  'Landscaping & Lawn Care': (
     <svg {...iconProps}>
-      <rect x="6.5" y="3.5" width="11" height="8" rx="1" />
-      <path d="M6.5 7.5h11" />
-      <circle cx="6" cy="18" r="2" />
-      <circle cx="12" cy="18" r="2" />
-      <circle cx="18" cy="18" r="2" />
+      <path d="M12 20.5v-8" />
+      <path d="M12 12.5c0-3.9-3.1-7-7-7 0 3.9 3.1 7 7 7z" />
+      <path d="M12 10c0-3 2.5-5.5 5.5-5.5 0 3-2.5 5.5-5.5 5.5z" />
+      <path d="M4.5 20.5h15" />
     </svg>
   ),
-  // Structural & Fabrication — an I-beam / girder cross-section.
-  'Structural & Fabrication': (
+  // Remodeling & Painting — a paint roller.
+  'Remodeling & Painting': (
     <svg {...iconProps}>
-      <path d="M4 5h16M4 19h16M12 5v14" />
-      <path d="M7.5 5v2.2M16.5 5v2.2M7.5 19v-2.2M16.5 19v-2.2" />
+      <rect x="3.5" y="4" width="12.5" height="5.5" rx="1.25" />
+      <path d="M16 6.75h4.5v4.75H12V14" />
+      <path d="M12 14v6.5" />
     </svg>
   ),
 };
@@ -212,13 +208,13 @@ export function Industries() {
         </Reveal>
         <Reveal delay={100}>
           <Heading>
-            Built for where <em>failure costs the most</em>.
+            Built for the trades that <em>keep homes running</em>.
           </Heading>
         </Reveal>
         <Reveal delay={140}>
           <Lead>
-            From high-pressure oil &amp; gas to aerospace tolerances, our parts hold up in the
-            environments that punish weak fabrication.
+            From HVAC to remodeling, we film the real work and turn it into content that puts
+            your trucks in more driveways.
           </Lead>
         </Reveal>
 

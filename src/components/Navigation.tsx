@@ -163,7 +163,7 @@ const Progress = styled.div<{ $value: number }>`
 
 // Root-relative links so the nav works from any page.
 const links = [
-  { href: '/services', label: 'Capabilities' },
+  { href: '/services', label: 'Services' },
   { href: '/#industries', label: 'Industries' },
   { href: '/#about', label: 'About' },
   { href: '/#reviews', label: 'Reviews' },
@@ -199,7 +199,7 @@ export function Navigation() {
       <Progress $value={progress} aria-hidden />
       <Bar $scrolled={scrolled || open}>
         <Inner>
-          <Logo href="/" size={48} image="/portfolio/logo.webp" />
+          <Logo href="/" size={20} mark />
           <NavLinks>
             {links.map((l) => (
               <NavLink key={l.href} href={l.href}>
@@ -208,7 +208,7 @@ export function Navigation() {
             ))}
           </NavLinks>
           <Right>
-            <CTA href={site.contact.bookingUrl}>Get a Quote</CTA>
+            <CTA href={site.contact.bookingUrl}>Book a Call</CTA>
             <Burger
               $open={open}
               onClick={() => setOpen((v) => !v)}
@@ -230,7 +230,7 @@ export function Navigation() {
           </a>
         ))}
         <a className="cta" href={site.contact.bookingUrl} onClick={() => setOpen(false)}>
-          Get a Quote →
+          Book a Call →
         </a>
       </MobilePanel>
     </>

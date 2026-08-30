@@ -3,9 +3,9 @@
 import styled from 'styled-components';
 import { site } from '@/data/site';
 
-// Wordmark for Laser Weld Inc. A small red "spark" mark (pure CSS, so it
+// Wordmark for Flozo Media. A small red "spark" mark (pure CSS, so it
 // works on any surface) sits next to a bold, slightly-condensed wordmark:
-// LASER in solid ink, WELD carrying the red accent.
+// FLOZO in solid ink, MEDIA carrying the red accent.
 const Wrap = styled.a<{ $light?: boolean; $size: number }>`
   display: inline-flex;
   align-items: center;
@@ -30,7 +30,7 @@ const Wrap = styled.a<{ $light?: boolean; $size: number }>`
   }
 `;
 
-// A red angled "beam" mark, evokes a cutting laser / weld spark.
+// A red angled "beam" mark, evokes a play-button / signal flash.
 const Mark = styled.span`
   position: relative;
   flex-shrink: 0;
@@ -78,8 +78,8 @@ export function Logo({ href = '/', light, size = 20, mark = false, image }: Logo
         <>
           {mark && <Mark aria-hidden />}
           <span className="wm">
-            <b>Laser</b>
-            <i>weld</i>
+            <b>Flozo</b>
+            <i>media</i>
           </span>
         </>
       )}
