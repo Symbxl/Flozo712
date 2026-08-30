@@ -125,7 +125,7 @@ const nav = [
 
 export function Footer() {
   const year = new Date().getFullYear();
-  const { socials, contact, credits } = site;
+  const { contact, credits } = site;
   return (
     <Wrap>
       <Inner>

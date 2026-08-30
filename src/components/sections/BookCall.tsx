@@ -14,15 +14,10 @@ import { Reveal } from '../Reveal';
 //  exactly like the reference. Restyled from the reference's purple/light
 //  look into the app's dark charcoal + signal-red (#EB4036) theme.
 //
-//  Submits to Formspree. Drop your form ID into FORMSPREE_ENDPOINT below
-//  (Formspree dashboard → your form → the .../f/xxxxxxx URL) and it's live.
+//  Submits to Formspree via FORMSPREE_ENDPOINT below.
 // =====================================================================
 
-// TODO: replace `your-form-id` with your Formspree form ID, e.g.
-//   'https://formspree.io/f/abcdwxyz'
-// Until then the final "Book my call" POST will 404 — the rest of the UI
-// (both steps, the calendar, and the slot picker) previews fully without it.
-const FORMSPREE_ENDPOINT = 'https://formspree.io/f/your-form-id';
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mqpkekgn';
 
 const countries = [
   { code: 'US', flag: '🇺🇸', dial: '+1' },
